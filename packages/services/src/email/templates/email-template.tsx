@@ -1,13 +1,5 @@
-import {
-  Html,
-  Head,
-  Body,
-  Container,
-  Img,
-  Heading,
-  Font,
-} from "@react-email/components";
-import { ReactNode } from "react";
+import { Body, Container, Font, Head, Heading, Html, Img } from "@react-email/components";
+import type { ReactNode } from "react";
 
 export type EmailTemplateProps = {
   title: string;
@@ -46,11 +38,7 @@ export const EmailTemplate = ({ title, children }: EmailTemplateProps) => (
           padding: 30,
         }}
       >
-        <Img
-          src="https://sustentus.com/email-assets/logo.png"
-          alt="Sustentus logo"
-          width={180}
-        />
+        <Img src="https://sustentus.com/email-assets/logo.png" alt="Sustentus logo" width={180} />
         <Heading style={{ fontSize: 24, marginBottom: 20 }}>{title}</Heading>
         {children}
       </Container>

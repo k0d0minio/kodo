@@ -1,2 +1,2 @@
-declare const styles: void;
+declare const styles: undefined;
 export default styles;

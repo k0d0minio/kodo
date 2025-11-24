@@ -1,13 +1,10 @@
 "use client";
 
-import * as React from "react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
-export const Table = ({
-  className,
-  ...props
-}: React.ComponentProps<"table">) => (
+export const Table = ({ className, ...props }: React.ComponentProps<"table">) => (
   <div data-slot="table-container" className="relative w-full overflow-x-auto">
     <table
       data-slot="table"
@@ -17,21 +14,11 @@ export const Table = ({
   </div>
 );
 
-export const TableHeader = ({
-  className,
-  ...props
-}: React.ComponentProps<"thead">) => (
-  <thead
-    data-slot="table-header"
-    className={cn("[&_tr]:border-b", className)}
-    {...props}
-  />
+export const TableHeader = ({ className, ...props }: React.ComponentProps<"thead">) => (
+  <thead data-slot="table-header" className={cn("[&_tr]:border-b", className)} {...props} />
 );
 
-export const TableBody = ({
-  className,
-  ...props
-}: React.ComponentProps<"tbody">) => (
+export const TableBody = ({ className, ...props }: React.ComponentProps<"tbody">) => (
   <tbody
     data-slot="table-body"
     className={cn("[&_tr:last-child]:border-0", className)}
@@ -39,24 +26,15 @@ export const TableBody = ({
   />
 );
 
-export const TableFooter = ({
-  className,
-  ...props
-}: React.ComponentProps<"tfoot">) => (
+export const TableFooter = ({ className, ...props }: React.ComponentProps<"tfoot">) => (
   <tfoot
     data-slot="table-footer"
-    className={cn(
-      "bg-muted/50 border-t font-medium [&>tr]:last:border-b-0",
-      className,
-    )}
+    className={cn("bg-muted/50 border-t font-medium [&>tr]:last:border-b-0", className)}
     {...props}
   />
 );
 
-export const TableRow = ({
-  className,
-  ...props
-}: React.ComponentProps<"tr">) => (
+export const TableRow = ({ className, ...props }: React.ComponentProps<"tr">) => (
   <tr
     data-slot="table-row"
     className={cn(
@@ -67,10 +45,7 @@ export const TableRow = ({
   />
 );
 
-export const TableHead = ({
-  className,
-  ...props
-}: React.ComponentProps<"th">) => (
+export const TableHead = ({ className, ...props }: React.ComponentProps<"th">) => (
   <th
     data-slot="table-head"
     className={cn(
@@ -81,10 +56,7 @@ export const TableHead = ({
   />
 );
 
-export const TableCell = ({
-  className,
-  ...props
-}: React.ComponentProps<"td">) => (
+export const TableCell = ({ className, ...props }: React.ComponentProps<"td">) => (
   <td
     data-slot="table-cell"
     className={cn(
@@ -95,10 +67,7 @@ export const TableCell = ({
   />
 );
 
-export const TableCaption = ({
-  className,
-  ...props
-}: React.ComponentProps<"caption">) => (
+export const TableCaption = ({ className, ...props }: React.ComponentProps<"caption">) => (
   <caption
     data-slot="table-caption"
     className={cn("text-muted-foreground mt-4 text-sm", className)}

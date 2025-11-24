@@ -9,4 +9,3 @@ export default defineConfig({
   clean: true,
   external: ["@supabase/ssr", "@supabase/supabase-js", "next/headers"],
 });
-

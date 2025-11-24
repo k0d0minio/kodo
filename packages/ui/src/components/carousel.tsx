@@ -1,18 +1,16 @@
 "use client";
 
+import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import {
+  type ComponentProps,
+  type KeyboardEvent,
   createContext,
   useCallback,
   useContext,
   useEffect,
   useState,
-  type ComponentProps,
-  type KeyboardEvent,
 } from "react";
-import useEmblaCarousel, {
-  type UseEmblaCarouselType,
-} from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "../lib/utils.js";
 import { Button } from "./button.js";
@@ -59,7 +57,7 @@ export const Carousel = ({
   className,
   children,
   ...props
-}: ComponentProps<"div"> & CarouselProps) => {
+}: ComponentProps<"section"> & CarouselProps) => {
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
@@ -128,56 +126,40 @@ export const Carousel = ({
         carouselRef,
         api: api,
         opts,
-        orientation:
-          orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+        orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
         scrollPrev,
         scrollNext,
         canScrollPrev,
         canScrollNext,
       }}
     >
-      <div
+      <section
         onKeyDownCapture={handleKeyDown}
         className={cn("relative", className)}
-        role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
         {...props}
       >
         {children}
-      </div>
+      </section>
     </CarouselContext.Provider>
   );
 };
 
-export const CarouselContent = ({
-  className,
-  ...props
-}: ComponentProps<"div">) => {
+export const CarouselContent = ({ className, ...props }: ComponentProps<"div">) => {
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div
-      ref={carouselRef}
-      className="overflow-hidden"
-      data-slot="carousel-content"
-    >
+    <div ref={carouselRef} className="overflow-hidden" data-slot="carousel-content">
       <div
-        className={cn(
-          "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-          className,
-        )}
+        className={cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className)}
         {...props}
       />
     </div>
   );
 };
 
-export const CarouselItem = ({
-  className,
-  ...props
-}: ComponentProps<"div">) => {
+export const CarouselItem = ({ className, ...props }: ComponentProps<"div">) => {
   const { orientation } = useCarousel();
 
   return (

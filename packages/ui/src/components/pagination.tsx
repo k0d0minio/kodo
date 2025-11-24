@@ -1,19 +1,11 @@
-import * as React from "react";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreHorizontalIcon,
-} from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
-import { Button, buttonVariants } from "./button.js";
+import { type Button, buttonVariants } from "./button.js";
 
-export const Pagination = ({
-  className,
-  ...props
-}: React.ComponentProps<"nav">) => (
+export const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
-    role="navigation"
     aria-label="pagination"
     data-slot="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
@@ -21,10 +13,7 @@ export const Pagination = ({
   />
 );
 
-export const PaginationContent = ({
-  className,
-  ...props
-}: React.ComponentProps<"ul">) => (
+export const PaginationContent = ({ className, ...props }: React.ComponentProps<"ul">) => (
   <ul
     data-slot="pagination-content"
     className={cn("flex flex-row items-center gap-1", className)}
@@ -92,10 +81,7 @@ export const PaginationNext = ({
   </PaginationLink>
 );
 
-export const PaginationEllipsis = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const PaginationEllipsis = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     aria-hidden
     data-slot="pagination-ellipsis"

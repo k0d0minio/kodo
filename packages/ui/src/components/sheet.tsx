@@ -1,32 +1,24 @@
 "use client";
 
-import * as React from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
-export const Sheet = ({
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Root>) => (
+export const Sheet = ({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) => (
   <SheetPrimitive.Root data-slot="sheet" {...props} />
 );
 
-export const SheetTrigger = ({
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Trigger>) => (
+export const SheetTrigger = ({ ...props }: React.ComponentProps<typeof SheetPrimitive.Trigger>) => (
   <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />
 );
 
-export const SheetClose = ({
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Close>) => (
+export const SheetClose = ({ ...props }: React.ComponentProps<typeof SheetPrimitive.Close>) => (
   <SheetPrimitive.Close data-slot="sheet-close" {...props} />
 );
 
-export const SheetPortal = ({
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Portal>) => (
+export const SheetPortal = ({ ...props }: React.ComponentProps<typeof SheetPrimitive.Portal>) => (
   <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />
 );
 
@@ -79,21 +71,11 @@ export const SheetContent = ({
   </SheetPortal>
 );
 
-export const SheetHeader = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
-  <div
-    data-slot="sheet-header"
-    className={cn("flex flex-col gap-1.5 p-4", className)}
-    {...props}
-  />
+export const SheetHeader = ({ className, ...props }: React.ComponentProps<"div">) => (
+  <div data-slot="sheet-header" className={cn("flex flex-col gap-1.5 p-4", className)} {...props} />
 );
 
-export const SheetFooter = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const SheetFooter = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="sheet-footer"
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}

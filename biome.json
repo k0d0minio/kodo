@@ -30,16 +30,10 @@
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "warn",
-        "noUnknownAtRules": "off",
-        "noConsole": "off",
-        "noBitwiseOperators": "off"
-      },
-      "style": {
-        "noMagicNumbers": "off",
-        "noNestedTernary": "off"
+        "noConsole": "off"
       },
       "nursery": {
-        "noUnnecessaryConditions": "off"
+        "noNestedTernary": "off"
       },
       "complexity": {
         "noExcessiveCognitiveComplexity": "off",
@@ -56,4 +50,3 @@
     }
   }
 }
-

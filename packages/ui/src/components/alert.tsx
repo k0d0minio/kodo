@@ -1,5 +1,5 @@
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
@@ -32,24 +32,15 @@ export const Alert = ({
   />
 );
 
-export const AlertTitle = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const AlertTitle = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="alert-title"
-    className={cn(
-      "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
-      className,
-    )}
+    className={cn("col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight", className)}
     {...props}
   />
 );
 
-export const AlertDescription = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const AlertDescription = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="alert-description"
     className={cn(

@@ -1,6 +1,6 @@
-import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
@@ -8,10 +8,7 @@ export const Breadcrumb = ({ ...props }: React.ComponentProps<"nav">) => (
   <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />
 );
 
-export const BreadcrumbList = ({
-  className,
-  ...props
-}: React.ComponentProps<"ol">) => (
+export const BreadcrumbList = ({ className, ...props }: React.ComponentProps<"ol">) => (
   <ol
     data-slot="breadcrumb-list"
     className={cn(
@@ -22,10 +19,7 @@ export const BreadcrumbList = ({
   />
 );
 
-export const BreadcrumbItem = ({
-  className,
-  ...props
-}: React.ComponentProps<"li">) => (
+export const BreadcrumbItem = ({ className, ...props }: React.ComponentProps<"li">) => (
   <li
     data-slot="breadcrumb-item"
     className={cn("inline-flex items-center gap-1.5", className)}
@@ -51,15 +45,13 @@ export const BreadcrumbLink = ({
   );
 };
 
-export const BreadcrumbPage = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const BreadcrumbPage = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="breadcrumb-page"
     role="link"
     aria-disabled="true"
     aria-current="page"
+    tabIndex={0}
     className={cn("text-foreground font-normal", className)}
     {...props}
   />
@@ -81,10 +73,7 @@ export const BreadcrumbSeparator = ({
   </li>
 );
 
-export const BreadcrumbEllipsis = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const BreadcrumbEllipsis = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="breadcrumb-ellipsis"
     role="presentation"

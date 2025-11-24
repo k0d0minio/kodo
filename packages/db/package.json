@@ -31,10 +31,13 @@
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.84.0"
   },
+  "peerDependencies": {
+    "next": "^15.0.0 || ^16.0.0"
+  },
   "devDependencies": {
     "@types/node": "catalog:",
+    "next": "^15.3.0",
     "tsup": "^8.0.0",
     "typescript": "catalog:"
   }
 }
-

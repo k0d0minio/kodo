@@ -1,14 +1,12 @@
 "use client";
 
-import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
-export const Dialog = ({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Root>) => (
+export const Dialog = ({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) => (
   <DialogPrimitive.Root data-slot="dialog" {...props} />
 );
 
@@ -18,15 +16,11 @@ export const DialogTrigger = ({
   <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
 );
 
-export const DialogPortal = ({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Portal>) => (
+export const DialogPortal = ({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) => (
   <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
 );
 
-export const DialogClose = ({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Close>) => (
+export const DialogClose = ({ ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) => (
   <DialogPrimitive.Close data-slot="dialog-close" {...props} />
 );
 
@@ -76,10 +70,7 @@ export const DialogContent = ({
   </DialogPortal>
 );
 
-export const DialogHeader = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const DialogHeader = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="dialog-header"
     className={cn("flex flex-col gap-2 text-center sm:text-left", className)}
@@ -87,16 +78,10 @@ export const DialogHeader = ({
   />
 );
 
-export const DialogFooter = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const DialogFooter = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="dialog-footer"
-    className={cn(
-      "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
-      className,
-    )}
+    className={cn("flex flex-col-reverse gap-2 sm:flex-row sm:justify-end", className)}
     {...props}
   />
 );

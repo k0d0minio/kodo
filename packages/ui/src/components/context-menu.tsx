@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
@@ -39,10 +39,7 @@ export const ContextMenuSub = ({
 export const ContextMenuRadioGroup = ({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.RadioGroup>) => (
-  <ContextMenuPrimitive.RadioGroup
-    data-slot="context-menu-radio-group"
-    {...props}
-  />
+  <ContextMenuPrimitive.RadioGroup data-slot="context-menu-radio-group" {...props} />
 );
 
 export const ContextMenuSubTrigger = ({
@@ -174,10 +171,7 @@ export const ContextMenuLabel = ({
   <ContextMenuPrimitive.Label
     data-slot="context-menu-label"
     data-inset={inset}
-    className={cn(
-      "text-foreground px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
-      className,
-    )}
+    className={cn("text-foreground px-2 py-1.5 text-sm font-medium data-[inset]:pl-8", className)}
     {...props}
   />
 );
@@ -193,16 +187,10 @@ export const ContextMenuSeparator = ({
   />
 );
 
-export const ContextMenuShortcut = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const ContextMenuShortcut = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="context-menu-shortcut"
-    className={cn(
-      "text-muted-foreground ml-auto text-xs tracking-widest",
-      className,
-    )}
+    className={cn("text-muted-foreground ml-auto text-xs tracking-widest", className)}
     {...props}
   />
 );

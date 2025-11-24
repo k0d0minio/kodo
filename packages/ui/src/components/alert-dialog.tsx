@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 import { buttonVariants } from "./button.js";
@@ -55,10 +55,7 @@ export const AlertDialogContent = ({
   </AlertDialogPortal>
 );
 
-export const AlertDialogHeader = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const AlertDialogHeader = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="alert-dialog-header"
     className={cn("flex flex-col gap-2 text-center sm:text-left", className)}
@@ -66,16 +63,10 @@ export const AlertDialogHeader = ({
   />
 );
 
-export const AlertDialogFooter = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const AlertDialogFooter = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="alert-dialog-footer"
-    className={cn(
-      "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
-      className,
-    )}
+    className={cn("flex flex-col-reverse gap-2 sm:flex-row sm:justify-end", className)}
     {...props}
   />
 );
@@ -106,10 +97,7 @@ export const AlertDialogAction = ({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) => (
-  <AlertDialogPrimitive.Action
-    className={cn(buttonVariants(), className)}
-    {...props}
-  />
+  <AlertDialogPrimitive.Action className={cn(buttonVariants(), className)} {...props} />
 );
 
 export const AlertDialogCancel = ({

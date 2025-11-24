@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
 import * as MenubarPrimitive from "@radix-ui/react-menubar";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
@@ -20,15 +20,11 @@ export const Menubar = ({
   />
 );
 
-export const MenubarMenu = ({
-  ...props
-}: React.ComponentProps<typeof MenubarPrimitive.Menu>) => (
+export const MenubarMenu = ({ ...props }: React.ComponentProps<typeof MenubarPrimitive.Menu>) => (
   <MenubarPrimitive.Menu data-slot="menubar-menu" {...props} />
 );
 
-export const MenubarGroup = ({
-  ...props
-}: React.ComponentProps<typeof MenubarPrimitive.Group>) => (
+export const MenubarGroup = ({ ...props }: React.ComponentProps<typeof MenubarPrimitive.Group>) => (
   <MenubarPrimitive.Group data-slot="menubar-group" {...props} />
 );
 
@@ -157,10 +153,7 @@ export const MenubarLabel = ({
   <MenubarPrimitive.Label
     data-slot="menubar-label"
     data-inset={inset}
-    className={cn(
-      "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
-      className,
-    )}
+    className={cn("px-2 py-1.5 text-sm font-medium data-[inset]:pl-8", className)}
     {...props}
   />
 );
@@ -176,23 +169,15 @@ export const MenubarSeparator = ({
   />
 );
 
-export const MenubarShortcut = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const MenubarShortcut = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="menubar-shortcut"
-    className={cn(
-      "text-muted-foreground ml-auto text-xs tracking-widest",
-      className,
-    )}
+    className={cn("text-muted-foreground ml-auto text-xs tracking-widest", className)}
     {...props}
   />
 );
 
-export const MenubarSub = ({
-  ...props
-}: React.ComponentProps<typeof MenubarPrimitive.Sub>) => (
+export const MenubarSub = ({ ...props }: React.ComponentProps<typeof MenubarPrimitive.Sub>) => (
   <MenubarPrimitive.Sub data-slot="menubar-sub" {...props} />
 );
 

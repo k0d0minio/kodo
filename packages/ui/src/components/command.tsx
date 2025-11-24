@@ -1,22 +1,13 @@
 "use client";
 
-import * as React from "react";
 import { Command as CommandPrimitive } from "cmdk";
 import { SearchIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "./dialog.js";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./dialog.js";
 
-export const Command = ({
-  className,
-  ...props
-}: React.ComponentProps<typeof CommandPrimitive>) => (
+export const Command = ({ className, ...props }: React.ComponentProps<typeof CommandPrimitive>) => (
   <CommandPrimitive
     data-slot="command"
     className={cn(
@@ -60,10 +51,7 @@ export const CommandInput = ({
   className,
   ...props
 }: React.ComponentProps<typeof CommandPrimitive.Input>) => (
-  <div
-    data-slot="command-input-wrapper"
-    className="flex h-9 items-center gap-2 border-b px-3"
-  >
+  <div data-slot="command-input-wrapper" className="flex h-9 items-center gap-2 border-b px-3">
     <SearchIcon className="size-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       data-slot="command-input"
@@ -82,17 +70,12 @@ export const CommandList = ({
 }: React.ComponentProps<typeof CommandPrimitive.List>) => (
   <CommandPrimitive.List
     data-slot="command-list"
-    className={cn(
-      "max-h-[300px] scroll-py-1 overflow-y-auto overflow-x-hidden",
-      className,
-    )}
+    className={cn("max-h-[300px] scroll-py-1 overflow-y-auto overflow-x-hidden", className)}
     {...props}
   />
 );
 
-export const CommandEmpty = ({
-  ...props
-}: React.ComponentProps<typeof CommandPrimitive.Empty>) => (
+export const CommandEmpty = ({ ...props }: React.ComponentProps<typeof CommandPrimitive.Empty>) => (
   <CommandPrimitive.Empty
     data-slot="command-empty"
     className="py-6 text-center text-sm"
@@ -139,16 +122,10 @@ export const CommandItem = ({
   />
 );
 
-export const CommandShortcut = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const CommandShortcut = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="command-shortcut"
-    className={cn(
-      "text-muted-foreground ml-auto text-xs tracking-widest",
-      className,
-    )}
+    className={cn("text-muted-foreground ml-auto text-xs tracking-widest", className)}
     {...props}
   />
 );

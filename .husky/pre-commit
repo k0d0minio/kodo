@@ -1,5 +1,2 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Run Biome check and format on staged files
 pnpm exec biome check --write --staged .

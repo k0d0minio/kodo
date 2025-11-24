@@ -1,13 +1,11 @@
 "use client";
 
-import * as React from "react";
+import type * as React from "react";
 import { Drawer as DrawerPrimitive } from "vaul";
 
 import { cn } from "../lib/utils.js";
 
-export const Drawer = ({
-  ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+export const Drawer = ({ ...props }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
   <DrawerPrimitive.Root data-slot="drawer" {...props} />
 );
 
@@ -17,15 +15,11 @@ export const DrawerTrigger = ({
   <DrawerPrimitive.Trigger data-slot="drawer-trigger" {...props} />
 );
 
-export const DrawerPortal = ({
-  ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Portal>) => (
+export const DrawerPortal = ({ ...props }: React.ComponentProps<typeof DrawerPrimitive.Portal>) => (
   <DrawerPrimitive.Portal data-slot="drawer-portal" {...props} />
 );
 
-export const DrawerClose = ({
-  ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Close>) => (
+export const DrawerClose = ({ ...props }: React.ComponentProps<typeof DrawerPrimitive.Close>) => (
   <DrawerPrimitive.Close data-slot="drawer-close" {...props} />
 );
 
@@ -68,10 +62,7 @@ export const DrawerContent = ({
   </DrawerPortal>
 );
 
-export const DrawerHeader = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const DrawerHeader = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="drawer-header"
     className={cn(
@@ -82,10 +73,7 @@ export const DrawerHeader = ({
   />
 );
 
-export const DrawerFooter = ({
-  className,
-  ...props
-}: React.ComponentProps<"div">) => (
+export const DrawerFooter = ({ className, ...props }: React.ComponentProps<"div">) => (
   <div
     data-slot="drawer-footer"
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}

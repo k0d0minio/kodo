@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
+import type * as React from "react";
 
 import { cn } from "../lib/utils.js";
 
@@ -96,10 +96,7 @@ export const DropdownMenuCheckboxItem = ({
 export const DropdownMenuRadioGroup = ({
   ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.RadioGroup>) => (
-  <DropdownMenuPrimitive.RadioGroup
-    data-slot="dropdown-menu-radio-group"
-    {...props}
-  />
+  <DropdownMenuPrimitive.RadioGroup data-slot="dropdown-menu-radio-group" {...props} />
 );
 
 export const DropdownMenuRadioItem = ({
@@ -134,10 +131,7 @@ export const DropdownMenuLabel = ({
   <DropdownMenuPrimitive.Label
     data-slot="dropdown-menu-label"
     data-inset={inset}
-    className={cn(
-      "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
-      className,
-    )}
+    className={cn("px-2 py-1.5 text-sm font-medium data-[inset]:pl-8", className)}
     {...props}
   />
 );
@@ -153,16 +147,10 @@ export const DropdownMenuSeparator = ({
   />
 );
 
-export const DropdownMenuShortcut = ({
-  className,
-  ...props
-}: React.ComponentProps<"span">) => (
+export const DropdownMenuShortcut = ({ className, ...props }: React.ComponentProps<"span">) => (
   <span
     data-slot="dropdown-menu-shortcut"
-    className={cn(
-      "text-muted-foreground ml-auto text-xs tracking-widest",
-      className,
-    )}
+    className={cn("text-muted-foreground ml-auto text-xs tracking-widest", className)}
     {...props}
   />
 );
