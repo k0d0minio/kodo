@@ -6,17 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false,
-    "ignore": [
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/.next/**",
-      "**/build/**",
-      "**/coverage/**",
-      "**/.turbo/**",
-      "**/pnpm-lock.yaml",
-      "**/*.tsbuildinfo"
-    ]
+    "ignoreUnknown": false
   },
   "formatter": {
     "enabled": true,
