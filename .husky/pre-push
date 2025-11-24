@@ -1,0 +1,25 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running pre-push checks..."
+
+# Type check if TypeScript exists
+if [ -f "tsconfig.json" ]; then
+  npm run type-check || {
+    echo "❌ TypeScript errors found"
+    echo "$(date): Push blocked - TypeScript errors" >> .cursor/learned/errors.log
+    echo "💡 Tip: Use '/fix-failed-build' in Cursor"
+    exit 1
+  }
+fi
+
+# Build check
+npm run build || {
+  echo "❌ Build failed"
+  echo "$(date): Push blocked - Build failed" >> .cursor/learned/errors.log
+  echo "💡 Tip: Use '/fix-failed-build' in Cursor"
+  exit 1
+}
+
+echo "✅ All checks passed!"
+
