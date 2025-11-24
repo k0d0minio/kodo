@@ -1,0 +1,611 @@
+Type,Product,Started Date,Completed Date,Description,Amount,Fee,Currency,State,Balance
+Interest,Deposit,2025-09-01 02:02:14,2025-09-01 02:02:14,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,511.37
+Transfer,Deposit,2025-09-01 09:36:16,2025-09-01 09:36:16,To Instant Access Savings,1000.00,0.00,EUR,COMPLETED,1511.37
+Transfer,Deposit,2025-09-01 21:31:32,2025-09-01 21:31:32,To Instant Access Savings,1.84,0.00,EUR,COMPLETED,1513.21
+Interest,Deposit,2025-09-02 02:14:22,2025-09-02 02:14:22,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1513.25
+Transfer,Deposit,2025-09-02 20:08:35,2025-09-02 20:08:35,To Instant Access Savings,1.60,0.00,EUR,COMPLETED,1514.85
+Transfer,Deposit,2025-09-02 21:25:38,2025-09-02 21:25:38,To Instant Access Savings,1.26,0.00,EUR,COMPLETED,1516.11
+Interest,Deposit,2025-09-03 02:05:14,2025-09-03 02:05:14,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1516.16
+Transfer,Deposit,2025-09-03 09:32:29,2025-09-03 09:32:29,To Instant Access Savings,0.10,0.00,EUR,COMPLETED,1516.26
+Transfer,Deposit,2025-09-03 09:35:47,2025-09-03 09:35:47,To Instant Access Savings,1.50,0.00,EUR,COMPLETED,1517.76
+Transfer,Deposit,2025-09-03 13:20:52,2025-09-03 13:20:53,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,1517.78
+Transfer,Deposit,2025-09-03 13:43:35,2025-09-03 13:43:35,To Instant Access Savings,1.36,0.00,EUR,COMPLETED,1519.14
+Transfer,Deposit,2025-09-03 14:22:23,2025-09-03 14:22:24,To Instant Access Savings,1.80,0.00,EUR,COMPLETED,1520.94
+Transfer,Deposit,2025-09-03 15:23:40,2025-09-03 15:23:40,To Instant Access Savings,1.90,0.00,EUR,COMPLETED,1522.84
+Transfer,Deposit,2025-09-03 16:37:46,2025-09-03 16:37:46,To Instant Access Savings,1.80,0.00,EUR,COMPLETED,1524.64
+Interest,Deposit,2025-09-04 02:05:29,2025-09-04 02:05:29,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1524.68
+Transfer,Deposit,2025-09-04 18:14:42,2025-09-04 18:14:42,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,1524.70
+Interest,Deposit,2025-09-05 02:05:01,2025-09-05 02:05:01,Interest earned - Instant Access Savings,0.07,0.02,EUR,COMPLETED,1524.75
+Transfer,Deposit,2025-09-05 06:17:30,2025-09-05 06:17:30,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1526.75
+Transfer,Deposit,2025-09-05 14:54:45,2025-09-05 14:54:45,To Instant Access Savings,0.80,0.00,EUR,COMPLETED,1527.55
+Interest,Deposit,2025-09-06 02:12:43,2025-09-06 02:12:43,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1527.59
+Transfer,Deposit,2025-09-06 08:40:58,2025-09-06 08:40:58,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,1527.79
+Transfer,Deposit,2025-09-06 09:38:54,2025-09-06 09:38:54,From Instant Access Savings,-200.00,0.00,EUR,COMPLETED,1327.79
+Transfer,Deposit,2025-09-06 09:41:12,2025-09-06 09:41:13,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,1328.79
+Transfer,Deposit,2025-09-06 12:32:07,2025-09-06 12:32:07,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1330.79
+Transfer,Deposit,2025-09-06 16:27:22,2025-09-06 16:27:22,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1332.79
+Interest,Deposit,2025-09-07 02:05:13,2025-09-07 02:05:13,Interest earned - Instant Access Savings,0.05,0.02,EUR,COMPLETED,1332.82
+Transfer,Deposit,2025-09-07 08:22:34,2025-09-07 08:22:34,To Instant Access Savings,0.80,0.00,EUR,COMPLETED,1333.62
+Transfer,Deposit,2025-09-07 18:23:05,2025-09-07 18:23:05,To Instant Access Savings,1.10,0.00,EUR,COMPLETED,1334.72
+Transfer,Deposit,2025-09-07 19:34:33,2025-09-07 19:34:33,To Instant Access Savings,1.60,0.00,EUR,COMPLETED,1336.32
+Interest,Deposit,2025-09-08 02:02:43,2025-09-08 02:02:43,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1336.37
+Transfer,Deposit,2025-09-08 09:08:39,2025-09-08 09:08:39,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,1336.39
+Transfer,Deposit,2025-09-08 09:16:33,2025-09-08 09:16:33,To Instant Access Savings,0.88,0.00,EUR,COMPLETED,1337.27
+Transfer,Deposit,2025-09-08 10:47:21,2025-09-08 10:47:21,From Instant Access Savings,-500.00,0.00,EUR,COMPLETED,837.27
+Transfer,Deposit,2025-09-08 11:21:21,2025-09-08 11:21:21,To Instant Access Savings,1.60,0.00,EUR,COMPLETED,838.87
+Interest,Deposit,2025-09-09 02:08:18,2025-09-09 02:08:18,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,838.89
+Transfer,Deposit,2025-09-09 16:56:44,2025-09-09 16:56:44,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,839.89
+Transfer,Deposit,2025-09-09 17:01:57,2025-09-09 17:01:57,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,739.89
+Transfer,Deposit,2025-09-09 17:02:22,2025-09-09 17:02:22,To Instant Access Savings,0.60,0.00,EUR,COMPLETED,740.49
+Transfer,Deposit,2025-09-09 17:31:32,2025-09-09 17:31:32,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,742.49
+Transfer,Deposit,2025-09-09 18:08:00,2025-09-09 18:08:00,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,743.89
+Transfer,Deposit,2025-09-09 19:58:34,2025-09-09 19:58:34,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,643.89
+Transfer,Deposit,2025-09-09 20:03:00,2025-09-09 20:03:00,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,645.29
+Interest,Deposit,2025-09-10 02:04:42,2025-09-10 02:04:42,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,645.31
+Interest,Deposit,2025-09-11 02:03:17,2025-09-11 02:03:17,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,645.33
+Transfer,Deposit,2025-09-11 08:09:16,2025-09-11 08:09:16,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,646.73
+Interest,Deposit,2025-09-12 02:02:09,2025-09-12 02:02:09,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,646.74
+Transfer,Deposit,2025-09-12 10:51:42,2025-09-12 10:51:42,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,546.74
+Transfer,Deposit,2025-09-12 17:39:30,2025-09-12 17:39:30,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,548.74
+Transfer,Deposit,2025-09-12 18:23:31,2025-09-12 18:23:31,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,550.74
+Transfer,Deposit,2025-09-12 19:32:05,2025-09-12 19:32:05,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,552.74
+Interest,Deposit,2025-09-13 02:05:18,2025-09-13 02:05:18,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,552.76
+Transfer,Deposit,2025-09-13 08:00:59,2025-09-13 08:00:59,To Instant Access Savings,0.40,0.00,EUR,COMPLETED,553.16
+Transfer,Deposit,2025-09-13 16:56:40,2025-09-13 16:56:40,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,554.16
+Interest,Deposit,2025-09-14 02:05:51,2025-09-14 02:05:51,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,554.18
+Transfer,Deposit,2025-09-14 10:07:37,2025-09-14 10:07:37,To Instant Access Savings,1.02,0.00,EUR,COMPLETED,555.20
+Interest,Deposit,2025-09-15 02:05:39,2025-09-15 02:05:39,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,555.21
+Interest,Deposit,2025-09-16 02:03:24,2025-09-16 02:03:24,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,555.23
+Transfer,Deposit,2025-09-16 13:22:12,2025-09-16 13:22:16,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,505.23
+Transfer,Deposit,2025-09-16 14:02:19,2025-09-16 14:02:20,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,405.23
+Transfer,Deposit,2025-09-16 17:10:19,2025-09-16 17:10:19,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,405.25
+Interest,Deposit,2025-09-17 02:03:35,2025-09-17 02:03:35,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,405.26
+Transfer,Deposit,2025-09-17 17:26:04,2025-09-17 17:26:04,To Instant Access Savings,0.44,0.00,EUR,COMPLETED,405.70
+Interest,Deposit,2025-09-18 02:04:31,2025-09-18 02:04:31,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,405.71
+Transfer,Deposit,2025-09-18 09:16:46,2025-09-18 09:16:46,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,407.11
+Transfer,Deposit,2025-09-18 09:34:16,2025-09-18 09:34:16,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,357.11
+Transfer,Deposit,2025-09-18 09:34:39,2025-09-18 09:34:39,To Instant Access Savings,1.82,0.00,EUR,COMPLETED,358.93
+Interest,Deposit,2025-09-19 02:24:26,2025-09-19 02:24:26,Interest earned - Instant Access Savings,0.01,0.00,EUR,COMPLETED,358.94
+Transfer,Deposit,2025-09-19 08:20:28,2025-09-19 08:20:28,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,360.34
+Transfer,Deposit,2025-09-19 11:50:25,2025-09-19 11:50:25,To Instant Access Savings,1.52,0.00,EUR,COMPLETED,361.86
+Transfer,Deposit,2025-09-19 11:54:27,2025-09-19 11:54:27,To Instant Access Savings,0.10,0.00,EUR,COMPLETED,361.96
+Transfer,Deposit,2025-09-19 11:55:49,2025-09-19 11:55:50,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,311.96
+Transfer,Deposit,2025-09-19 11:56:02,2025-09-19 11:56:02,To Instant Access Savings,1.52,0.00,EUR,COMPLETED,313.48
+Interest,Deposit,2025-09-20 02:04:24,2025-09-20 02:04:24,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,313.50
+Transfer,Deposit,2025-09-20 11:47:50,2025-09-20 11:47:50,To Instant Access Savings,1.70,0.00,EUR,COMPLETED,315.20
+Transfer,Deposit,2025-09-20 14:53:38,2025-09-20 14:53:38,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,317.20
+Transfer,Deposit,2025-09-20 22:06:30,2025-09-20 22:06:30,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,217.20
+Transfer,Deposit,2025-09-20 22:06:38,2025-09-20 22:06:38,To Instant Access Savings,1.80,0.00,EUR,COMPLETED,219.00
+Transfer,Deposit,2025-09-20 23:15:36,2025-09-20 23:15:36,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,220.00
+Transfer,Deposit,2025-09-20 23:54:21,2025-09-20 23:54:21,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,222.00
+Transfer,Deposit,2025-09-21 12:39:45,2025-09-21 12:39:45,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,122.00
+Transfer,Deposit,2025-09-21 12:40:08,2025-09-21 12:40:08,To Instant Access Savings,0.36,0.00,EUR,COMPLETED,122.36
+Transfer,Deposit,2025-09-21 12:56:34,2025-09-21 12:56:34,From Instant Access Savings,-120.00,0.00,EUR,COMPLETED,2.36
+Transfer,Deposit,2025-09-21 16:05:03,2025-09-21 16:05:03,To Instant Access Savings,0.40,0.00,EUR,COMPLETED,2.76
+Transfer,Deposit,2025-09-23 10:47:46,2025-09-23 10:47:46,To Instant Access Savings,0.06,0.00,EUR,COMPLETED,2.82
+Transfer,Deposit,2025-09-23 11:11:50,2025-09-23 11:11:50,To Instant Access Savings,1.70,0.00,EUR,COMPLETED,4.52
+Transfer,Deposit,2025-09-23 16:37:22,2025-09-23 16:37:22,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,5.52
+Transfer,Deposit,2025-09-23 16:46:30,2025-09-23 16:46:30,To Instant Access Savings,0.90,0.00,EUR,COMPLETED,6.42
+Transfer,Deposit,2025-09-23 16:51:26,2025-09-23 16:51:27,To Instant Access Savings,0.90,0.00,EUR,COMPLETED,7.32
+Transfer,Deposit,2025-09-23 18:45:54,2025-09-23 18:45:54,To Instant Access Savings,0.44,0.00,EUR,COMPLETED,7.76
+Interest,Deposit,2025-09-24 02:05:23,2025-09-24 02:05:23,Interest earned - Instant Access Savings,0.01,0.01,EUR,COMPLETED,7.76
+Transfer,Deposit,2025-09-25 07:55:28,2025-09-25 07:55:28,To Instant Access Savings,1.60,0.00,EUR,COMPLETED,9.36
+Transfer,Deposit,2025-09-25 15:00:47,2025-09-25 15:00:47,To Instant Access Savings,1.70,0.00,EUR,COMPLETED,11.06
+Transfer,Deposit,2025-09-25 15:12:59,2025-09-25 15:12:59,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,12.06
+Transfer,Deposit,2025-09-27 08:36:16,2025-09-27 08:36:16,From Instant Access Savings,-12.00,0.00,EUR,COMPLETED,0.06
+Transfer,Deposit,2025-09-29 16:34:16,2025-09-29 16:34:16,To Instant Access Savings,0.80,0.00,EUR,COMPLETED,0.86
+Transfer,Deposit,2025-09-29 18:59:23,2025-09-29 18:59:24,To Instant Access Savings,0.64,0.00,EUR,COMPLETED,1.50
+Transfer,Deposit,2025-09-30 00:28:17,2025-09-30 00:28:17,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,3.50
+Transfer,Deposit,2025-09-30 11:58:19,2025-09-30 11:58:19,To Instant Access Savings,1.98,0.00,EUR,COMPLETED,5.48
+Transfer,Deposit,2025-10-01 09:38:50,2025-10-01 09:38:50,To Instant Access Savings,1000.00,0.00,EUR,COMPLETED,1005.48
+Transfer,Deposit,2025-10-01 10:40:01,2025-10-01 10:40:01,To Instant Access Savings,0.40,0.00,EUR,COMPLETED,1005.88
+Transfer,Deposit,2025-10-01 18:21:28,2025-10-01 18:21:28,To Instant Access Savings,1.80,0.00,EUR,COMPLETED,1007.68
+Interest,Deposit,2025-10-02 02:00:42,2025-10-02 02:00:42,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1007.71
+Transfer,Deposit,2025-10-02 08:50:15,2025-10-02 08:50:15,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,1009.11
+Transfer,Deposit,2025-10-02 13:54:15,2025-10-02 13:54:15,To Instant Access Savings,0.36,0.00,EUR,COMPLETED,1009.47
+Transfer,Deposit,2025-10-02 20:37:15,2025-10-02 20:37:15,To Instant Access Savings,0.50,0.00,EUR,COMPLETED,1009.97
+Transfer,Deposit,2025-10-03 00:25:08,2025-10-03 00:25:08,To Instant Access Savings,1.38,0.00,EUR,COMPLETED,1011.35
+Interest,Deposit,2025-10-03 02:03:33,2025-10-03 02:03:33,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1011.38
+Interest,Deposit,2025-10-04 02:07:24,2025-10-04 02:07:24,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1011.41
+Transfer,Deposit,2025-10-04 08:57:49,2025-10-04 08:57:50,To Instant Access Savings,1.78,0.00,EUR,COMPLETED,1013.19
+Transfer,Deposit,2025-10-04 09:41:29,2025-10-04 09:41:30,From Instant Access Savings,-500.00,0.00,EUR,COMPLETED,513.19
+Transfer,Deposit,2025-10-04 11:45:08,2025-10-04 11:45:08,To Instant Access Savings,0.62,0.00,EUR,COMPLETED,513.81
+Interest,Deposit,2025-10-05 02:04:14,2025-10-05 02:04:14,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,513.82
+Interest,Deposit,2025-10-06 02:08:23,2025-10-06 02:08:23,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,513.83
+Transfer,Deposit,2025-10-06 11:19:10,2025-10-06 11:19:10,To Instant Access Savings,0.40,0.00,EUR,COMPLETED,514.23
+Transfer,Deposit,2025-10-06 20:46:39,2025-10-06 20:46:39,To Instant Access Savings,1.20,0.00,EUR,COMPLETED,515.43
+Interest,Deposit,2025-10-07 02:05:15,2025-10-07 02:05:15,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,515.45
+Transfer,Deposit,2025-10-07 13:47:19,2025-10-07 13:47:19,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,517.45
+Transfer,Deposit,2025-10-07 16:15:03,2025-10-07 16:15:03,To Instant Access Savings,0.84,0.00,EUR,COMPLETED,518.29
+Interest,Deposit,2025-10-08 02:06:49,2025-10-08 02:06:49,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,518.31
+Transfer,Deposit,2025-10-08 03:13:11,2025-10-08 03:13:11,To Instant Access Savings,0.92,0.00,EUR,COMPLETED,519.23
+Transfer,Deposit,2025-10-08 09:59:17,2025-10-08 09:59:17,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,519.43
+Interest,Deposit,2025-10-09 02:06:16,2025-10-09 02:06:16,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,519.44
+Transfer,Deposit,2025-10-09 08:35:06,2025-10-09 08:35:06,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,520.84
+Interest,Deposit,2025-10-10 02:06:35,2025-10-10 02:06:35,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,520.86
+Transfer,Deposit,2025-10-10 09:33:33,2025-10-10 09:33:33,To Instant Access Savings,1.60,0.00,EUR,COMPLETED,522.46
+Transfer,Deposit,2025-10-10 18:19:47,2025-10-10 18:19:47,To Instant Access Savings,1.96,0.00,EUR,COMPLETED,524.42
+Transfer,Deposit,2025-10-10 18:45:39,2025-10-10 18:45:39,To Instant Access Savings,1.90,0.00,EUR,COMPLETED,526.32
+Transfer,Deposit,2025-10-10 19:26:56,2025-10-10 19:26:56,To Instant Access Savings,0.40,0.00,EUR,COMPLETED,526.72
+Interest,Deposit,2025-10-11 02:08:01,2025-10-11 02:08:01,Interest earned - Instant Access Savings,0.02,0.01,EUR,COMPLETED,526.73
+Transfer,Deposit,2025-10-12 01:05:48,2025-10-12 01:05:48,To Instant Access Savings,0.12,0.00,EUR,COMPLETED,526.85
+Transfer,Deposit,2025-10-12 01:06:51,2025-10-12 01:06:51,To Instant Access Savings,0.94,0.00,EUR,COMPLETED,527.79
+Transfer,Deposit,2025-10-12 01:37:38,2025-10-12 01:37:38,To Instant Access Savings,0.94,0.00,EUR,COMPLETED,528.73
+Interest,Deposit,2025-10-12 02:13:51,2025-10-12 02:13:51,Interest earned - Instant Access Savings,0.02,0.00,EUR,COMPLETED,528.75
+Transfer,Deposit,2025-10-12 14:11:19,2025-10-12 14:11:19,From Instant Access Savings,-528.00,0.00,EUR,COMPLETED,0.75
+Transfer,Deposit,2025-10-14 17:26:33,2025-10-14 17:26:33,To Instant Access Savings,1.96,0.00,EUR,COMPLETED,2.71
+Transfer,Deposit,2025-10-14 17:54:13,2025-10-14 17:54:14,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,2.73
+Transfer,Deposit,2025-10-15 03:53:50,2025-10-15 03:53:50,To Instant Access Savings,1.20,0.00,EUR,COMPLETED,3.93
+Transfer,Deposit,2025-10-15 19:35:10,2025-10-15 19:35:10,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,3.95
+Transfer,Deposit,2025-10-17 17:26:16,2025-10-17 17:26:16,To Instant Access Savings,0.44,0.00,EUR,COMPLETED,4.39
+Transfer,Deposit,2025-10-20 15:28:24,2025-10-20 15:28:24,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,6.39
+Transfer,Deposit,2025-10-22 06:24:20,2025-10-22 06:24:20,To Instant Access Savings,1.20,0.00,EUR,COMPLETED,7.59
+Transfer,Deposit,2025-10-25 14:30:24,2025-10-25 14:30:24,To Instant Access Savings,1.04,0.00,EUR,COMPLETED,8.63
+Transfer,Deposit,2025-10-27 00:22:52,2025-10-27 00:22:52,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,10.63
+Interest,Deposit,2025-10-27 01:07:15,2025-10-27 01:07:15,Interest earned - Instant Access Savings,0.01,0.01,EUR,COMPLETED,10.63
+Transfer,Deposit,2025-10-27 17:04:58,2025-10-27 17:04:58,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,10.65
+Transfer,Deposit,2025-10-27 17:11:34,2025-10-27 17:11:34,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,11.65
+Transfer,Deposit,2025-10-28 10:30:13,2025-10-28 10:30:14,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,13.05
+Transfer,Deposit,2025-10-28 10:48:41,2025-10-28 10:48:41,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,15.05
+Transfer,Deposit,2025-10-29 04:46:21,2025-10-29 04:46:22,To Instant Access Savings,1.20,0.00,EUR,COMPLETED,16.25
+Transfer,Deposit,2025-10-29 10:40:51,2025-10-29 10:40:51,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,17.25
+Transfer,Deposit,2025-11-01 08:37:02,2025-11-01 08:37:02,To Instant Access Savings,1000.00,0.00,EUR,COMPLETED,1017.25
+Interest,Deposit,2025-11-02 01:05:28,2025-11-02 01:05:28,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1017.28
+Transfer,Deposit,2025-11-02 21:22:54,2025-11-02 21:22:54,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1019.28
+Interest,Deposit,2025-11-03 01:06:07,2025-11-03 01:06:07,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1019.31
+Transfer,Deposit,2025-11-03 12:50:36,2025-11-03 12:50:36,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,1019.33
+Interest,Deposit,2025-11-04 01:03:37,2025-11-04 01:03:37,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1019.36
+Transfer,Deposit,2025-11-04 13:57:13,2025-11-04 13:57:13,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,1019.56
+Interest,Deposit,2025-11-05 01:05:17,2025-11-05 01:05:17,Interest earned - Instant Access Savings,0.05,0.02,EUR,COMPLETED,1019.59
+Transfer,Deposit,2025-11-05 03:50:03,2025-11-05 03:50:03,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1021.59
+Transfer,Deposit,2025-11-05 07:31:53,2025-11-05 07:31:53,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1023.59
+Transfer,Deposit,2025-11-05 07:57:41,2025-11-05 07:57:41,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,1023.79
+Transfer,Deposit,2025-11-05 10:05:31,2025-11-05 10:05:32,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,1025.79
+Transfer,Deposit,2025-11-05 10:06:48,2025-11-05 10:06:49,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,1025.99
+Transfer,Deposit,2025-11-05 17:48:59,2025-11-05 17:48:59,To Instant Access Savings,1.84,0.00,EUR,COMPLETED,1027.83
+Interest,Deposit,2025-11-06 01:07:30,2025-11-06 01:07:30,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1027.86
+Transfer,Deposit,2025-11-06 17:16:43,2025-11-06 17:16:43,To Instant Access Savings,0.76,0.00,EUR,COMPLETED,1028.62
+Interest,Deposit,2025-11-07 01:05:17,2025-11-07 01:05:17,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1028.65
+Interest,Deposit,2025-11-08 01:04:31,2025-11-08 01:04:31,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1028.68
+Interest,Deposit,2025-11-09 01:06:18,2025-11-09 01:06:18,Interest earned - Instant Access Savings,0.05,0.02,EUR,COMPLETED,1028.71
+Interest,Deposit,2025-11-10 01:06:52,2025-11-10 01:06:52,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,1028.74
+Transfer,Deposit,2025-11-10 11:59:33,2025-11-10 11:59:33,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,978.74
+Transfer,Deposit,2025-11-10 12:06:46,2025-11-10 12:06:46,To Instant Access Savings,0.90,0.00,EUR,COMPLETED,979.64
+Transfer,Deposit,2025-11-10 20:19:42,2025-11-10 20:19:42,To Instant Access Savings,0.38,0.00,EUR,COMPLETED,980.02
+Interest,Deposit,2025-11-11 01:07:43,2025-11-11 01:07:43,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,980.05
+Transfer,Deposit,2025-11-11 23:32:22,2025-11-11 23:32:22,To Instant Access Savings,0.48,0.00,EUR,COMPLETED,980.53
+Interest,Deposit,2025-11-12 01:05:04,2025-11-12 01:05:04,Interest earned - Instant Access Savings,0.04,0.02,EUR,COMPLETED,980.55
+Transfer,Deposit,2025-11-12 21:38:55,2025-11-12 21:38:55,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,930.55
+Transfer,Deposit,2025-11-12 21:39:43,2025-11-12 21:39:43,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,931.95
+Interest,Deposit,2025-11-13 01:05:58,2025-11-13 01:05:58,Interest earned - Instant Access Savings,0.04,0.01,EUR,COMPLETED,931.98
+Transfer,Deposit,2025-11-13 17:25:44,2025-11-13 17:25:44,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,881.98
+Transfer,Deposit,2025-11-13 17:39:06,2025-11-13 17:39:07,To Instant Access Savings,1.02,0.00,EUR,COMPLETED,883.00
+Interest,Deposit,2025-11-14 01:08:58,2025-11-14 01:08:58,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,883.02
+Transfer,Deposit,2025-11-14 08:35:44,2025-11-14 08:35:44,To Instant Access Savings,0.80,0.00,EUR,COMPLETED,883.82
+Transfer,Deposit,2025-11-14 17:38:18,2025-11-14 17:38:18,From Instant Access Savings,-75.00,0.00,EUR,COMPLETED,808.82
+Transfer,Deposit,2025-11-14 17:44:45,2025-11-14 17:44:46,To Instant Access Savings,1.92,0.00,EUR,COMPLETED,810.74
+Transfer,Deposit,2025-11-14 20:01:15,2025-11-14 20:01:15,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,760.74
+Transfer,Deposit,2025-11-14 20:01:23,2025-11-14 20:01:23,To Instant Access Savings,1.00,0.00,EUR,COMPLETED,761.74
+Interest,Deposit,2025-11-15 01:07:29,2025-11-15 01:07:29,Interest earned - Instant Access Savings,0.03,0.01,EUR,COMPLETED,761.76
+Transfer,Deposit,2025-11-15 11:50:54,2025-11-15 11:50:54,From Instant Access Savings,-125.00,0.00,EUR,COMPLETED,636.76
+Transfer,Deposit,2025-11-15 15:55:00,2025-11-15 15:55:00,To Instant Access Savings,1.70,0.00,EUR,COMPLETED,638.46
+Transfer,Deposit,2025-11-15 18:00:55,2025-11-15 18:00:56,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,538.46
+Transfer,Deposit,2025-11-15 18:35:10,2025-11-15 18:35:10,To Instant Access Savings,0.02,0.00,EUR,COMPLETED,538.48
+Interest,Deposit,2025-11-16 01:05:12,2025-11-16 01:05:12,Interest earned - Instant Access Savings,0.03,0.00,EUR,COMPLETED,538.51
+Transfer,Deposit,2025-11-16 09:39:02,2025-11-16 09:39:02,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,488.51
+Transfer,Deposit,2025-11-16 16:38:14,2025-11-16 16:38:14,To Instant Access Savings,0.60,0.00,EUR,COMPLETED,489.11
+Transfer,Deposit,2025-11-16 17:35:04,2025-11-16 17:35:04,From Instant Access Savings,-75.00,0.00,EUR,COMPLETED,414.11
+Transfer,Deposit,2025-11-16 17:36:37,2025-11-16 17:36:37,From Instant Access Savings,-75.00,0.00,EUR,COMPLETED,339.11
+Interest,Deposit,2025-11-17 01:07:06,2025-11-17 01:07:06,Interest earned - Instant Access Savings,0.01,0.01,EUR,COMPLETED,339.11
+Transfer,Deposit,2025-11-17 16:25:58,2025-11-17 16:25:58,To Instant Access Savings,0.44,0.00,EUR,COMPLETED,339.55
+Interest,Deposit,2025-11-18 01:10:18,2025-11-18 01:10:18,Interest earned - Instant Access Savings,0.01,0.00,EUR,COMPLETED,339.56
+Transfer,Deposit,2025-11-18 08:52:04,2025-11-18 08:52:04,From Instant Access Savings,-130.00,0.00,EUR,COMPLETED,209.56
+Interest,Deposit,2025-11-19 01:08:10,2025-11-19 01:08:10,Interest earned - Instant Access Savings,0.01,0.00,EUR,COMPLETED,209.57
+Transfer,Deposit,2025-11-19 08:14:10,2025-11-19 08:14:10,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,109.57
+Transfer,Deposit,2025-11-19 08:19:02,2025-11-19 08:19:03,To Instant Access Savings,0.80,0.00,EUR,COMPLETED,110.37
+Transfer,Deposit,2025-11-19 11:33:06,2025-11-19 11:33:06,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,110.57
+Transfer,Deposit,2025-11-19 12:51:50,2025-11-19 12:51:50,To Instant Access Savings,20.00,0.00,EUR,COMPLETED,130.57
+Transfer,Deposit,2025-11-19 12:52:26,2025-11-19 12:52:26,From Instant Access Savings,-50.00,0.00,EUR,COMPLETED,80.57
+Transfer,Deposit,2025-11-19 12:52:36,2025-11-19 12:52:36,To Instant Access Savings,0.78,0.00,EUR,COMPLETED,81.35
+Transfer,Deposit,2025-11-19 14:02:02,2025-11-19 14:02:03,To Instant Access Savings,1.70,0.00,EUR,COMPLETED,83.05
+Interest,Deposit,2025-11-20 01:05:37,2025-11-20 01:05:37,Interest earned - Instant Access Savings,0.01,0.01,EUR,COMPLETED,83.05
+Transfer,Deposit,2025-11-20 09:21:37,2025-11-20 09:21:37,To Instant Access Savings,1.72,0.00,EUR,COMPLETED,84.77
+Transfer,Deposit,2025-11-20 17:08:44,2025-11-20 17:08:44,From Instant Access Savings,-40.00,0.00,EUR,COMPLETED,44.77
+Transfer,Deposit,2025-11-20 18:24:52,2025-11-20 18:24:52,To Instant Access Savings,0.08,0.00,EUR,COMPLETED,44.85
+Transfer,Deposit,2025-11-21 13:08:16,2025-11-21 13:08:16,From Instant Access Savings,-44.85,0.00,EUR,COMPLETED,0.00
+Transfer,Deposit,2025-11-21 14:31:18,2025-11-21 14:31:18,To Instant Access Savings,3000.00,0.00,EUR,COMPLETED,3000.00
+Transfer,Deposit,2025-11-21 15:09:31,2025-11-21 15:09:32,To Instant Access Savings,1.34,0.00,EUR,COMPLETED,3001.34
+Transfer,Deposit,2025-11-21 15:25:18,2025-11-21 15:25:19,To Instant Access Savings,1.02,0.00,EUR,COMPLETED,3002.36
+Transfer,Deposit,2025-11-21 17:48:29,2025-11-21 17:48:29,To Instant Access Savings,0.72,0.00,EUR,COMPLETED,3003.08
+Transfer,Deposit,2025-11-21 17:48:45,2025-11-21 17:48:45,To Instant Access Savings,1.54,0.00,EUR,COMPLETED,3004.62
+Interest,Deposit,2025-11-22 01:06:09,2025-11-22 01:06:09,Interest earned - Instant Access Savings,0.12,0.03,EUR,COMPLETED,3004.71
+Transfer,Deposit,2025-11-22 01:34:01,2025-11-22 01:34:01,To Instant Access Savings,1.40,0.00,EUR,COMPLETED,3006.11
+Transfer,Deposit,2025-11-22 09:21:22,2025-11-22 09:21:22,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,3006.31
+Transfer,Deposit,2025-11-22 14:36:58,2025-11-22 14:36:58,To Instant Access Savings,0.20,0.00,EUR,COMPLETED,3006.51
+Interest,Deposit,2025-11-23 01:03:36,2025-11-23 01:03:36,Interest earned - Instant Access Savings,0.12,0.04,EUR,COMPLETED,3006.59
+Transfer,Deposit,2025-11-23 09:56:17,2025-11-23 09:56:18,To Instant Access Savings,2.00,0.00,EUR,COMPLETED,3008.59
+Transfer,Deposit,2025-11-23 12:57:43,2025-11-23 12:57:43,To Instant Access Savings,0.12,0.00,EUR,COMPLETED,3008.71
+Transfer,Deposit,2025-11-23 16:34:55,2025-11-23 16:34:55,From Instant Access Savings,-500.00,0.00,EUR,COMPLETED,2508.71
+Transfer,Deposit,2025-11-23 16:53:41,2025-11-23 16:53:41,From Instant Access Savings,-100.00,0.00,EUR,COMPLETED,2408.71
+Transfer,Deposit,2025-11-23 16:55:50,2025-11-23 16:55:51,To Instant Access Savings,1.10,0.00,EUR,COMPLETED,2409.81
+Interest,Deposit,2025-11-24 01:06:59,2025-11-24 01:06:59,Interest earned - Instant Access Savings,0.10,0.03,EUR,COMPLETED,2409.88
+Transfer,Current,2025-09-01 09:36:16,2025-09-01 09:36:16,To Instant Access Savings,-1000.00,0.00,EUR,COMPLETED,671.48
+Card Payment,Current,2025-08-30 20:47:10,2025-09-01 09:39:46,BP,-8.25,0.00,EUR,COMPLETED,663.23
+Card Payment,Current,2025-08-31 01:59:35,2025-09-01 09:40:18,Pingo Doce,-6.09,0.00,EUR,COMPLETED,657.14
+Card Payment,Current,2025-08-31 10:36:50,2025-09-01 10:56:02,Padaria Artesanal,-12.00,0.00,EUR,COMPLETED,645.14
+Card Payment,Current,2025-08-31 16:18:47,2025-09-01 11:03:59,Petropovoa,-16.00,0.00,EUR,COMPLETED,629.14
+Transfer,Current,2025-09-01 21:31:32,2025-09-01 21:31:32,To Instant Access Savings,-1.84,0.00,EUR,COMPLETED,627.30
+Card Payment,Current,2025-08-31 20:39:17,2025-09-02 11:03:36,Uber Eats,-18.12,0.00,EUR,COMPLETED,609.18
+ATM,Current,2025-09-01 13:36:00,2025-09-02 11:09:54,Cash withdrawal at Ass Mor Ribamar - En 247,-50.00,1.00,EUR,COMPLETED,558.18
+ATM,Current,2025-09-01 13:36:50,2025-09-02 11:09:55,Cash withdrawal at Ass Mor Ribamar - En 247,-20.00,1.00,EUR,COMPLETED,537.18
+Transfer,Current,2025-09-02 20:08:35,2025-09-02 20:08:35,To Instant Access Savings,-1.60,0.00,EUR,COMPLETED,535.58
+Transfer,Current,2025-09-02 21:25:38,2025-09-02 21:25:38,To Instant Access Savings,-1.26,0.00,EUR,COMPLETED,534.32
+Transfer,Current,2025-09-03 09:32:29,2025-09-03 09:32:29,To Instant Access Savings,-0.10,0.00,EUR,COMPLETED,534.22
+Transfer,Current,2025-09-03 09:35:47,2025-09-03 09:35:47,To Instant Access Savings,-1.50,0.00,EUR,COMPLETED,532.72
+Card Payment,Current,2025-09-01 21:31:32,2025-09-03 10:38:51,Uber Eats,-37.08,0.00,EUR,COMPLETED,495.64
+Transfer,Current,2025-09-03 13:20:52,2025-09-03 13:20:53,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,495.62
+Transfer,Current,2025-09-03 13:43:35,2025-09-03 13:43:35,To Instant Access Savings,-1.36,0.00,EUR,COMPLETED,494.26
+Transfer,Current,2025-09-03 14:22:23,2025-09-03 14:22:24,To Instant Access Savings,-1.80,0.00,EUR,COMPLETED,492.46
+Transfer,Current,2025-09-03 15:23:40,2025-09-03 15:23:40,To Instant Access Savings,-1.90,0.00,EUR,COMPLETED,490.56
+Transfer,Current,2025-09-03 16:37:46,2025-09-03 16:37:46,To Instant Access Savings,-1.80,0.00,EUR,COMPLETED,488.76
+Card Payment,Current,2025-09-03 16:37:46,2025-09-04 09:59:13,A21,-3.10,0.00,EUR,COMPLETED,485.66
+Card Payment,Current,2025-09-03 09:32:29,2025-09-04 10:11:39,Lidl,-96.95,0.00,EUR,COMPLETED,388.71
+Card Payment,Current,2025-09-03 14:22:23,2025-09-04 10:11:39,Padaria Lisboa,-18.10,0.00,EUR,COMPLETED,370.61
+Card Payment,Current,2025-09-03 13:43:34,2025-09-04 10:11:39,Repsol,-12.32,0.00,EUR,COMPLETED,358.29
+Card Payment,Current,2025-09-03 09:35:47,2025-09-04 10:36:28,A Nossa Peixaria,-11.25,0.00,EUR,COMPLETED,347.04
+Card Payment,Current,2025-09-02 20:08:35,2025-09-04 10:37:34,Rest Vitoria,-9.20,0.00,EUR,COMPLETED,337.84
+Card Payment,Current,2025-09-02 21:25:38,2025-09-04 10:37:42,Pingo Doce,-21.37,0.00,EUR,COMPLETED,316.47
+Card Payment,Current,2025-09-03 13:20:52,2025-09-04 10:37:48,Pingo Doce,-16.99,0.00,EUR,COMPLETED,299.48
+Card Payment,Current,2025-09-03 15:23:39,2025-09-04 10:38:03,DCEA,-6.05,0.00,EUR,COMPLETED,293.43
+Transfer,Current,2025-09-04 18:14:42,2025-09-04 18:14:42,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,293.41
+Transfer,Current,2025-09-05 06:17:30,2025-09-05 06:17:30,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,291.41
+Transfer,Current,2025-09-05 14:54:45,2025-09-05 14:54:45,To Instant Access Savings,-0.80,0.00,EUR,COMPLETED,290.61
+Transfer,Current,2025-09-06 08:40:58,2025-09-06 08:40:58,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,290.41
+Transfer,Current,2025-09-06 08:59:42,2025-09-06 08:59:42,Transfer to SOPHIE ANNE BERTRAND,-5.80,0.00,EUR,COMPLETED,284.61
+Transfer,Current,2025-09-06 09:38:54,2025-09-06 09:38:54,From Instant Access Savings,200.00,0.00,EUR,COMPLETED,484.61
+Transfer,Current,2025-09-06 09:41:12,2025-09-06 09:41:13,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,483.61
+Transfer,Current,2025-09-06 11:08:56,2025-09-06 11:08:56,Transfer to Revolut user,-7.00,0.00,EUR,COMPLETED,476.61
+Transfer,Current,2025-09-06 12:32:07,2025-09-06 12:32:07,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,474.61
+Card Payment,Current,2025-09-05 06:17:30,2025-09-06 15:24:15,Hetzner,-39.00,0.00,EUR,COMPLETED,435.61
+Card Payment,Current,2025-09-04 18:14:41,2025-09-06 15:36:53,Uber Eats,-52.99,0.00,EUR,COMPLETED,382.62
+Card Payment,Current,2025-09-05 14:54:44,2025-09-06 16:06:30,Intermarché,-101.60,0.00,EUR,COMPLETED,281.02
+Transfer,Current,2025-09-06 16:27:22,2025-09-06 16:27:22,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,279.02
+Transfer,Current,2025-09-07 08:22:34,2025-09-07 08:22:34,To Instant Access Savings,-0.80,0.00,EUR,COMPLETED,278.22
+Transfer,Current,2025-09-07 08:25:56,2025-09-07 08:25:56,Transfer to SOPHIE ANNE BERTRAND,-3.70,0.00,EUR,COMPLETED,274.52
+Card Payment,Current,2025-09-06 08:40:58,2025-09-07 11:16:44,Padaria Artesanal,-14.90,0.00,EUR,COMPLETED,259.62
+Card Payment,Current,2025-09-06 12:32:05,2025-09-07 11:56:03,Restaurante Caminito,-42.00,0.00,EUR,COMPLETED,217.62
+Card Payment,Current,2025-09-06 09:41:12,2025-09-07 11:58:24,Pingo Doce,-72.50,0.00,EUR,COMPLETED,145.12
+Transfer,Current,2025-09-07 18:23:05,2025-09-07 18:23:05,To Instant Access Savings,-1.10,0.00,EUR,COMPLETED,144.02
+Transfer,Current,2025-09-07 19:34:33,2025-09-07 19:34:33,To Instant Access Savings,-1.60,0.00,EUR,COMPLETED,142.42
+Transfer,Current,2025-09-08 09:08:39,2025-09-08 09:08:39,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,142.40
+Transfer,Current,2025-09-08 09:16:33,2025-09-08 09:16:33,To Instant Access Savings,-0.88,0.00,EUR,COMPLETED,141.52
+Card Payment,Current,2025-09-06 16:27:21,2025-09-08 10:23:12,D P T Desenvolvime,-8.00,0.00,EUR,COMPLETED,133.52
+Card Payment,Current,2025-09-07 08:22:34,2025-09-08 10:46:02,Carlos Renan,-13.60,0.00,EUR,COMPLETED,119.92
+Transfer,Current,2025-09-08 10:47:21,2025-09-08 10:47:21,From Instant Access Savings,500.00,0.00,EUR,COMPLETED,619.92
+Transfer,Current,2025-09-08 10:47:21,2025-09-08 10:47:22,Transfer to Revolut user,-500.00,0.00,EUR,COMPLETED,119.92
+Transfer,Current,2025-09-08 11:21:21,2025-09-08 11:21:21,To Instant Access Savings,-1.60,0.00,EUR,COMPLETED,118.32
+Card Payment,Current,2025-09-07 19:34:33,2025-09-08 11:47:56,Pão da Vila,-24.20,0.00,EUR,COMPLETED,94.12
+Card Payment,Current,2025-09-07 18:23:05,2025-09-08 11:49:23,ERICEIRA,-16.45,0.00,EUR,COMPLETED,77.67
+Card Payment,Current,2025-09-08 09:08:39,2025-09-09 09:31:26,Leroy Merlin,-12.99,0.00,EUR,COMPLETED,64.68
+Card Payment,Current,2025-09-08 11:21:20,2025-09-09 14:07:28,Supermercados Cafe P,-5.20,0.00,EUR,COMPLETED,59.48
+Card Payment,Current,2025-09-08 09:16:33,2025-09-09 14:12:03,Continente,-29.56,0.00,EUR,COMPLETED,29.92
+Transfer,Current,2025-09-09 16:56:44,2025-09-09 16:56:44,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,28.92
+Transfer,Current,2025-09-09 17:01:57,2025-09-09 17:01:57,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,128.92
+Transfer,Current,2025-09-09 17:02:22,2025-09-09 17:02:22,To Instant Access Savings,-0.60,0.00,EUR,COMPLETED,128.32
+Transfer,Current,2025-09-09 17:31:32,2025-09-09 17:31:32,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,126.32
+Transfer,Current,2025-09-09 18:08:00,2025-09-09 18:08:00,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,124.92
+Transfer,Current,2025-09-09 19:58:34,2025-09-09 19:58:34,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,224.92
+Transfer,Current,2025-09-09 20:03:00,2025-09-09 20:03:00,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,223.52
+Card Payment,Current,2025-09-09 17:31:31,2025-09-10 09:25:21,Tabacaria Navegantes,-1.00,0.00,EUR,COMPLETED,222.52
+Card Payment,Current,2025-09-09 17:02:22,2025-09-10 09:25:43,People,-56.70,0.00,EUR,COMPLETED,165.82
+Card Payment,Current,2025-09-09 16:56:44,2025-09-10 09:25:43,People,-2.50,0.00,EUR,COMPLETED,163.32
+Card Payment,Current,2025-09-09 18:08:00,2025-09-10 10:44:02,D P T Desenvolvime,-9.30,0.00,EUR,COMPLETED,154.02
+Transfer,Current,2025-09-11 08:09:16,2025-09-11 08:09:16,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,152.62
+Transfer,Current,2025-09-11 08:14:09,2025-09-11 08:14:10,Transfer to SOPHIE ANNE BERTRAND,-7.40,0.00,EUR,COMPLETED,145.22
+Card Payment,Current,2025-09-09 20:03:00,2025-09-11 13:48:55,La Pecora Nera,-63.30,0.00,EUR,COMPLETED,81.92
+Transfer,Current,2025-09-12 10:51:42,2025-09-12 10:51:42,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,181.92
+Card Payment,Current,2025-09-11 08:09:16,2025-09-12 10:59:15,Carlos Renan,-11.30,0.00,EUR,COMPLETED,170.62
+ATM,Current,2025-09-11 18:49:03,2025-09-12 11:14:54,Cash withdrawal at R Prudencio Franco Da Tri,-50.00,1.00,EUR,COMPLETED,119.62
+Transfer,Current,2025-09-12 11:28:55,2025-09-12 11:28:55,Transfer to SOPHIE ANNE BERTRAND,-18.23,0.00,EUR,COMPLETED,101.39
+Transfer,Current,2025-09-12 17:39:30,2025-09-12 17:39:30,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,99.39
+Transfer,Current,2025-09-12 18:23:31,2025-09-12 18:23:31,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,97.39
+Transfer,Current,2025-09-12 19:32:05,2025-09-12 19:32:05,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,95.39
+Transfer,Current,2025-09-13 08:00:59,2025-09-13 08:00:59,To Instant Access Savings,-0.40,0.00,EUR,COMPLETED,94.99
+Card Payment,Current,2025-09-12 19:32:04,2025-09-13 10:41:59,Farol Da Colina,-19.00,0.00,EUR,COMPLETED,75.99
+Card Payment,Current,2025-09-12 17:39:30,2025-09-13 10:41:59,Farol Da Colina,-6.00,0.00,EUR,COMPLETED,69.99
+Card Payment,Current,2025-09-12 18:23:31,2025-09-13 10:42:00,Farol Da Colina,-21.00,0.00,EUR,COMPLETED,48.99
+Transfer,Current,2025-09-13 16:56:40,2025-09-13 16:56:40,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,47.99
+Transfer,Current,2025-09-14 10:07:37,2025-09-14 10:07:37,To Instant Access Savings,-1.02,0.00,EUR,COMPLETED,46.97
+Card Payment,Current,2025-09-13 08:00:58,2025-09-14 11:36:18,Carlos Renan,-8.80,0.00,EUR,COMPLETED,38.17
+Card Payment,Current,2025-09-13 16:56:38,2025-09-14 12:06:10,Vroom,-3.50,0.00,EUR,COMPLETED,34.67
+Card Payment,Current,2025-09-14 10:07:32,2025-09-15 08:51:55,BP,-34.49,0.00,EUR,COMPLETED,0.18
+Transfer,Current,2025-09-16 13:22:12,2025-09-16 13:22:16,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,50.18
+Transfer,Current,2025-09-16 14:00:46,2025-09-16 14:00:46,Transfer to Revolut user,-50.00,0.00,EUR,COMPLETED,0.18
+Transfer,Current,2025-09-16 14:02:19,2025-09-16 14:02:20,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,100.18
+Transfer,Current,2025-09-16 17:10:19,2025-09-16 17:10:19,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,100.16
+Card Payment,Current,2025-09-16 17:10:19,2025-09-17 11:04:26,Uber,-4.99,0.00,EUR,COMPLETED,95.17
+Transfer,Current,2025-09-17 17:26:04,2025-09-17 17:26:04,To Instant Access Savings,-0.44,0.00,EUR,COMPLETED,94.73
+Transfer,Current,2025-09-18 09:06:21,2025-09-18 09:06:21,Transfer to SOPHIE ANNE BERTRAND,-28.25,0.00,EUR,COMPLETED,66.48
+Transfer,Current,2025-09-18 09:16:46,2025-09-18 09:16:46,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,65.08
+Transfer,Current,2025-09-18 09:34:16,2025-09-18 09:34:16,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,115.08
+Transfer,Current,2025-09-18 09:34:39,2025-09-18 09:34:39,To Instant Access Savings,-1.82,0.00,EUR,COMPLETED,113.26
+ATM,Current,2025-09-17 11:04:09,2025-09-18 15:07:55,Cash withdrawal at Minipreco -r Alto Camacha,-20.00,0.00,EUR,COMPLETED,93.26
+Card Payment,Current,2025-09-17 17:26:04,2025-09-18 17:07:19,Claude.ai,-21.78,0.00,EUR,COMPLETED,71.48
+Transfer,Current,2025-09-19 08:20:28,2025-09-19 08:20:28,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,70.08
+Transfer,Current,2025-09-19 11:50:25,2025-09-19 11:50:25,To Instant Access Savings,-1.52,0.00,EUR,COMPLETED,68.56
+Card Payment,Current,2025-09-19 11:54:26,,Vercel,-8.95,0.00,EUR,REVERTED,
+Transfer,Current,2025-09-19 11:54:27,2025-09-19 11:54:27,To Instant Access Savings,-0.10,0.00,EUR,COMPLETED,68.46
+Transfer,Current,2025-09-19 11:55:49,2025-09-19 11:55:50,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,118.46
+Transfer,Current,2025-09-19 11:56:02,2025-09-19 11:56:02,To Instant Access Savings,-1.52,0.00,EUR,COMPLETED,116.94
+Card Payment,Current,2025-09-18 09:16:45,2025-09-19 13:14:53,Padaria Artesanal,-8.30,0.00,EUR,COMPLETED,108.64
+Card Payment,Current,2025-09-18 09:34:38,2025-09-19 14:33:26,Talho Da Teresa,-18.09,0.00,EUR,COMPLETED,90.55
+Transfer,Current,2025-09-20 11:47:50,2025-09-20 11:47:50,To Instant Access Savings,-1.70,0.00,EUR,COMPLETED,88.85
+Card Payment,Current,2025-09-19 08:20:28,2025-09-20 12:35:28,Padaria Artesanal,-15.30,0.00,EUR,COMPLETED,73.55
+Transfer,Current,2025-09-20 13:10:48,2025-09-20 13:10:48,Transfer to SOPHIE ANNE BERTRAND,-5.80,0.00,EUR,COMPLETED,67.75
+Transfer,Current,2025-09-20 14:53:38,2025-09-20 14:53:38,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,65.75
+Card Payment,Current,2025-09-19 11:50:23,2025-09-20 15:34:08,Vercel,-9.24,0.00,EUR,COMPLETED,56.51
+Card Payment,Current,2025-09-19 11:56:02,2025-09-20 15:34:08,Vercel,-9.24,0.00,EUR,COMPLETED,47.27
+Transfer,Current,2025-09-20 22:06:30,2025-09-20 22:06:30,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,147.27
+Transfer,Current,2025-09-20 22:06:38,2025-09-20 22:06:38,To Instant Access Savings,-1.80,0.00,EUR,COMPLETED,145.47
+Transfer,Current,2025-09-20 23:15:36,2025-09-20 23:15:36,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,144.47
+Transfer,Current,2025-09-20 23:54:21,2025-09-20 23:54:21,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,142.47
+Card Payment,Current,2025-09-20 11:47:50,2025-09-21 10:57:11,Burger King,-18.15,0.00,EUR,COMPLETED,124.32
+Card Payment,Current,2025-09-20 23:54:21,2025-09-21 11:51:22,Adega Bar 1987,-29.00,0.00,EUR,COMPLETED,95.32
+Transfer,Current,2025-09-21 12:39:45,2025-09-21 12:39:45,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,195.32
+Transfer,Current,2025-09-21 12:40:08,2025-09-21 12:40:08,To Instant Access Savings,-0.36,0.00,EUR,COMPLETED,194.96
+Transfer,Current,2025-09-21 12:56:34,2025-09-21 12:56:34,From Instant Access Savings,120.00,0.00,EUR,COMPLETED,314.96
+Transfer,Current,2025-09-21 12:56:35,2025-09-21 12:56:35,Transfer to Revolut user,-120.00,0.00,EUR,COMPLETED,194.96
+Card Payment,Current,2025-09-20 14:53:38,2025-09-21 13:31:38,Canva,-27.00,0.00,EUR,COMPLETED,167.96
+Transfer,Current,2025-09-21 16:05:03,2025-09-21 16:05:03,To Instant Access Savings,-0.40,0.00,EUR,COMPLETED,167.56
+Card Payment,Current,2025-09-20 22:06:38,2025-09-22 09:30:06,Salao J Tiro Taco,-8.10,0.00,EUR,COMPLETED,159.46
+Card Payment,Current,2025-09-21 16:05:02,2025-09-22 09:37:31,Balagan Food,-71.80,0.00,EUR,COMPLETED,87.66
+Card Payment,Current,2025-09-20 23:15:36,2025-09-22 10:22:21,Adega Bar 1987,-17.50,0.00,EUR,COMPLETED,70.16
+Card Payment,Current,2025-09-21 12:40:07,2025-09-22 15:36:58,Lidl,-56.82,0.00,EUR,COMPLETED,13.34
+Deposit,Current,2025-09-23 10:32:37,2025-09-23 10:32:37,Payment from M JAMIE CALLUM NISBET,200.00,0.00,EUR,COMPLETED,213.34
+Transfer,Current,2025-09-23 10:47:46,2025-09-23 10:47:46,To Instant Access Savings,-0.06,0.00,EUR,COMPLETED,213.28
+Transfer,Current,2025-09-23 11:11:50,2025-09-23 11:11:50,To Instant Access Savings,-1.70,0.00,EUR,COMPLETED,211.58
+Transfer,Current,2025-09-23 16:37:22,2025-09-23 16:37:22,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,210.58
+Transfer,Current,2025-09-23 16:46:30,2025-09-23 16:46:30,To Instant Access Savings,-0.90,0.00,EUR,COMPLETED,209.68
+Transfer,Current,2025-09-23 16:51:26,2025-09-23 16:51:27,To Instant Access Savings,-0.90,0.00,EUR,COMPLETED,208.78
+Transfer,Current,2025-09-23 18:45:54,2025-09-23 18:45:54,To Instant Access Savings,-0.44,0.00,EUR,COMPLETED,208.34
+Card Payment,Current,2025-09-23 16:51:26,2025-09-24 09:27:27,A21,-0.55,0.00,EUR,COMPLETED,207.79
+Card Payment,Current,2025-09-23 16:46:30,2025-09-24 09:27:27,A21,-0.55,0.00,EUR,COMPLETED,207.24
+Card Payment,Current,2025-09-23 16:37:21,2025-09-24 09:34:28,Bk27910 Mafra,-6.50,0.00,EUR,COMPLETED,200.74
+Card Payment,Current,2025-09-23 10:47:46,2025-09-24 10:22:46,Aldi,-65.97,0.00,EUR,COMPLETED,134.77
+Card Payment,Current,2025-09-23 11:11:49,2025-09-24 10:22:46,Talho Da Teresa,-19.15,0.00,EUR,COMPLETED,115.62
+Transfer,Current,2025-09-24 14:10:50,2025-09-24 14:10:51,Transfer to SOPHIE ANNE BERTRAND,-17.80,0.00,EUR,COMPLETED,97.82
+Transfer,Current,2025-09-25 07:55:28,2025-09-25 07:55:28,To Instant Access Savings,-1.60,0.00,EUR,COMPLETED,96.22
+Card Payment,Current,2025-09-23 18:45:54,2025-09-25 11:25:05,Uber Eats,-41.78,0.00,EUR,COMPLETED,54.44
+Transfer,Current,2025-09-25 15:00:47,2025-09-25 15:00:47,To Instant Access Savings,-1.70,0.00,EUR,COMPLETED,52.74
+Transfer,Current,2025-09-25 15:12:59,2025-09-25 15:12:59,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,51.74
+Card Payment,Current,2025-09-25 15:00:46,2025-09-26 10:08:43,Farmacia Oceano,-20.15,0.00,EUR,COMPLETED,31.59
+Card Payment,Current,2025-09-25 15:12:59,2025-09-26 10:08:43,Loja Snta Juice,-10.50,0.00,EUR,COMPLETED,21.09
+Card Payment,Current,2025-09-25 07:55:28,2025-09-26 11:31:15,Padaria Artesanal,-20.20,0.00,EUR,COMPLETED,0.89
+Transfer,Current,2025-09-27 08:36:16,2025-09-27 08:36:16,From Instant Access Savings,12.00,0.00,EUR,COMPLETED,12.89
+Transfer,Current,2025-09-27 08:36:30,2025-09-27 08:36:30,Transfer to SOPHIE ANNE BERTRAND,-9.00,0.00,EUR,COMPLETED,3.89
+Deposit,Current,2025-09-29 02:15:34,2025-09-29 02:15:34,Payment from M JAMIE CALLUM NISBET,100.00,0.00,EUR,COMPLETED,103.89
+Deposit,Current,2025-09-29 11:52:06,2025-09-29 11:52:06,Payment from M JAMIE CALLUM NISBET,88.22,0.00,EUR,COMPLETED,192.11
+Rev Payment,Current,2025-09-29 14:46:42,2025-09-29 14:46:49,SPIC AND SPAN. Home & *London,-183.00,0.00,EUR,COMPLETED,9.11
+Transfer,Current,2025-09-29 14:52:45,2025-09-29 14:52:45,Transfer from APOYAR LIMITED,3500.00,0.00,EUR,COMPLETED,3509.11
+Transfer,Current,2025-09-29 16:34:16,2025-09-29 16:34:16,To Instant Access Savings,-0.80,0.00,EUR,COMPLETED,3508.31
+Transfer,Current,2025-09-29 18:59:23,2025-09-29 18:59:24,To Instant Access Savings,-0.64,0.00,EUR,COMPLETED,3507.67
+Transfer,Current,2025-09-30 00:28:17,2025-09-30 00:28:17,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,3505.67
+Card Payment,Current,2025-09-29 16:34:16,2025-09-30 09:35:29,Intermarché,-144.60,0.00,EUR,COMPLETED,3361.07
+Transfer,Current,2025-09-30 11:58:19,2025-09-30 11:58:19,To Instant Access Savings,-1.98,0.00,EUR,COMPLETED,3359.09
+Transfer,Current,2025-10-01 09:38:50,2025-10-01 09:38:50,To Instant Access Savings,-1000.00,0.00,EUR,COMPLETED,2359.09
+Transfer,Current,2025-10-01 10:40:01,2025-10-01 10:40:01,To Instant Access Savings,-0.40,0.00,EUR,COMPLETED,2358.69
+Card Payment,Current,2025-09-29 18:59:23,2025-10-01 11:16:28,Uber Eats,-32.68,0.00,EUR,COMPLETED,2326.01
+Transfer,Current,2025-10-01 12:09:01,2025-10-01 12:09:01,Transfer to SOPHIE ANNE BERTRAND,-41.90,0.00,EUR,COMPLETED,2284.11
+Transfer,Current,2025-10-01 18:21:28,2025-10-01 18:21:28,To Instant Access Savings,-1.80,0.00,EUR,COMPLETED,2282.31
+Transfer,Current,2025-10-02 08:46:01,2025-10-02 08:46:01,Transfer to SOPHIE ANNE BERTRAND,-23.69,0.00,EUR,COMPLETED,2258.62
+Transfer,Current,2025-10-02 08:50:15,2025-10-02 08:50:15,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,2257.22
+Card Payment,Current,2025-09-30 11:58:18,2025-10-02 08:57:11,GoDaddy,-104.01,0.00,EUR,COMPLETED,2153.21
+Transfer,Current,2025-10-02 13:54:15,2025-10-02 13:54:15,To Instant Access Savings,-0.36,0.00,EUR,COMPLETED,2152.85
+Card Payment,Current,2025-10-01 10:40:01,2025-10-02 14:05:35,Balagan Food,-7.80,0.00,EUR,COMPLETED,2145.05
+Card Payment,Current,2025-10-01 18:21:28,2025-10-02 14:05:35,Balagan Food,-16.10,0.00,EUR,COMPLETED,2128.95
+Card Payment,Current,2025-09-30 00:28:16,2025-10-02 14:26:45,WOO,-10.00,0.00,EUR,COMPLETED,2118.95
+Transfer,Current,2025-10-02 15:59:07,2025-10-02 15:59:08,Transfer to ALI KAAN OGLAKCI,-50.00,0.00,EUR,COMPLETED,2068.95
+Transfer,Current,2025-10-02 16:43:53,2025-10-02 16:43:53,Transfer to Revolut user,-1000.00,0.00,EUR,COMPLETED,1068.95
+Transfer,Current,2025-10-02 20:37:15,2025-10-02 20:37:15,To Instant Access Savings,-0.50,0.00,EUR,COMPLETED,1068.45
+Transfer,Current,2025-10-03 00:25:08,2025-10-03 00:25:08,To Instant Access Savings,-1.38,0.00,EUR,COMPLETED,1067.07
+Card Payment,Current,2025-10-02 08:50:15,2025-10-03 11:24:48,Padaria Artesanal,-22.30,0.00,EUR,COMPLETED,1044.77
+Card Payment,Current,2025-10-02 13:54:14,2025-10-03 11:46:50,Lidl,-108.82,0.00,EUR,COMPLETED,935.95
+Transfer,Current,2025-10-04 08:57:49,2025-10-04 08:57:50,To Instant Access Savings,-1.78,0.00,EUR,COMPLETED,934.17
+Transfer,Current,2025-10-04 09:41:29,2025-10-04 09:41:30,From Instant Access Savings,500.00,0.00,EUR,COMPLETED,1434.17
+Transfer,Current,2025-10-04 09:41:30,2025-10-04 09:41:30,Transfer to Revolut user,-500.00,0.00,EUR,COMPLETED,934.17
+Card Payment,Current,2025-10-02 20:37:14,2025-10-04 11:23:33,Uber,-3.75,0.00,EUR,COMPLETED,930.42
+Card Payment,Current,2025-10-03 00:25:08,2025-10-04 11:23:35,Uber,-5.31,0.00,EUR,COMPLETED,925.11
+Transfer,Current,2025-10-04 11:45:08,2025-10-04 11:45:08,To Instant Access Savings,-0.62,0.00,EUR,COMPLETED,924.49
+Transfer,Current,2025-10-04 14:53:54,2025-10-04 14:53:55,Transfer to SOPHIE ANNE BERTRAND,-6.30,0.00,EUR,COMPLETED,918.19
+Card Payment,Current,2025-10-04 08:57:49,2025-10-05 10:08:07,Uber,-7.11,0.00,EUR,COMPLETED,911.08
+Card Payment,Current,2025-10-04 11:45:08,2025-10-05 10:21:33,Burger King,-11.69,0.00,EUR,COMPLETED,899.39
+Transfer,Current,2025-10-06 11:19:10,2025-10-06 11:19:10,To Instant Access Savings,-0.40,0.00,EUR,COMPLETED,898.99
+Transfer,Current,2025-10-06 20:46:39,2025-10-06 20:46:39,To Instant Access Savings,-1.20,0.00,EUR,COMPLETED,897.79
+Card Payment,Current,2025-10-06 11:19:09,2025-10-07 10:44:09,Balagan Food,-10.80,0.00,EUR,COMPLETED,886.99
+Transfer,Current,2025-10-07 13:47:19,2025-10-07 13:47:19,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,884.99
+Card Payment,Current,2025-10-06 20:46:39,2025-10-07 15:29:59,BetterHelp,-35.40,0.00,EUR,COMPLETED,849.59
+Transfer,Current,2025-10-07 16:15:03,2025-10-07 16:15:03,To Instant Access Savings,-0.84,0.00,EUR,COMPLETED,848.75
+Transfer,Current,2025-10-08 03:13:11,2025-10-08 03:13:11,To Instant Access Savings,-0.92,0.00,EUR,COMPLETED,847.83
+Transfer,Current,2025-10-08 09:59:17,2025-10-08 09:59:17,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,847.63
+Card Payment,Current,2025-10-07 13:47:18,2025-10-08 10:48:42,EOS Contentia,-225.00,0.00,EUR,COMPLETED,622.63
+Transfer,Current,2025-10-08 12:19:25,2025-10-08 12:19:25,Transfer to SOPHIE ANNE BERTRAND,-36.80,0.00,EUR,COMPLETED,585.83
+Transfer,Current,2025-10-09 08:29:21,2025-10-09 08:29:21,Transfer to SOPHIE ANNE BERTRAND,-8.51,0.00,EUR,COMPLETED,577.32
+Transfer,Current,2025-10-09 08:35:06,2025-10-09 08:35:06,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,575.92
+Card Payment,Current,2025-10-07 16:15:03,2025-10-09 10:06:38,Ryanair,-268.58,0.00,EUR,COMPLETED,307.34
+Card Payment,Current,2025-10-08 03:13:11,2025-10-09 10:23:14,Hetzner,-30.54,0.00,EUR,COMPLETED,276.80
+Card Payment,Current,2025-10-08 09:59:16,2025-10-09 10:53:47,Hurley Surf Club,-3.90,0.00,EUR,COMPLETED,272.90
+Transfer,Current,2025-10-10 09:33:33,2025-10-10 09:33:33,To Instant Access Savings,-1.60,0.00,EUR,COMPLETED,271.30
+Card Payment,Current,2025-10-09 08:35:05,2025-10-10 16:16:46,Carlos Renan,-10.30,0.00,EUR,COMPLETED,261.00
+Transfer,Current,2025-10-10 18:19:47,2025-10-10 18:19:47,To Instant Access Savings,-1.96,0.00,EUR,COMPLETED,259.04
+Transfer,Current,2025-10-10 18:45:39,2025-10-10 18:45:39,To Instant Access Savings,-1.90,0.00,EUR,COMPLETED,257.14
+Transfer,Current,2025-10-10 19:26:56,2025-10-10 19:26:56,To Instant Access Savings,-0.40,0.00,EUR,COMPLETED,256.74
+Card Payment,Current,2025-10-10 18:19:46,2025-10-11 11:21:23,Intermarché,-57.02,0.00,EUR,COMPLETED,199.72
+Card Payment,Current,2025-10-10 18:45:38,2025-10-11 12:11:13,Talho Da Teresa,-17.05,0.00,EUR,COMPLETED,182.67
+Card Payment,Current,2025-10-10 19:26:56,2025-10-11 12:12:39,Buco Smarh Burger,-32.80,0.00,EUR,COMPLETED,149.87
+Card Payment,Current,2025-10-10 09:33:33,2025-10-11 13:51:25,Pastel Polo Norte,-2.20,0.00,EUR,COMPLETED,147.67
+Card Payment,Current,2025-10-12 01:05:48,,Uber,-5.94,0.00,EUR,REVERTED,
+Transfer,Current,2025-10-12 01:05:48,2025-10-12 01:05:48,To Instant Access Savings,-0.12,0.00,EUR,COMPLETED,147.55
+Card Payment,Current,2025-10-12 01:06:51,,Uber,-7.53,0.00,EUR,REVERTED,
+Transfer,Current,2025-10-12 01:06:51,2025-10-12 01:06:51,To Instant Access Savings,-0.94,0.00,EUR,COMPLETED,146.61
+Transfer,Current,2025-10-12 01:37:38,2025-10-12 01:37:38,To Instant Access Savings,-0.94,0.00,EUR,COMPLETED,145.67
+Transfer,Current,2025-10-12 09:56:52,2025-10-12 09:56:53,Transfer to SOPHIE ANNE BERTRAND,-7.90,0.00,EUR,COMPLETED,137.77
+Transfer,Current,2025-10-12 14:11:19,2025-10-12 14:11:19,From Instant Access Savings,528.00,0.00,EUR,COMPLETED,665.77
+Transfer,Current,2025-10-12 14:11:48,2025-10-12 14:11:49,Transfer to Revolut user,-650.00,0.00,EUR,COMPLETED,15.77
+Card Payment,Current,2025-10-12 01:37:37,2025-10-13 09:52:03,Uber,-7.53,0.00,EUR,COMPLETED,8.24
+Transfer,Current,2025-10-14 07:50:18,2025-10-14 07:50:18,Transfer from Revolut user,50.00,0.00,EUR,COMPLETED,58.24
+Transfer,Current,2025-10-14 17:26:33,2025-10-14 17:26:33,To Instant Access Savings,-1.96,0.00,EUR,COMPLETED,56.28
+Transfer,Current,2025-10-14 17:54:13,2025-10-14 17:54:14,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,56.26
+Transfer,Current,2025-10-15 03:53:50,2025-10-15 03:53:50,To Instant Access Savings,-1.20,0.00,EUR,COMPLETED,55.06
+Card Payment,Current,2025-10-14 17:54:13,2025-10-15 10:11:21,Petropovoa,-2.99,0.00,EUR,COMPLETED,52.07
+Card Payment,Current,2025-10-15 03:53:50,2025-10-15 13:16:29,BetterHelp,-35.40,0.00,EUR,COMPLETED,16.67
+Transfer,Current,2025-10-15 19:35:10,2025-10-15 19:35:10,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,16.65
+Deposit,Current,2025-10-16 09:22:17,2025-10-16 09:22:18,Payment from M JAMIE CALLUM NISBET,500.00,0.00,EUR,COMPLETED,516.65
+Card Payment,Current,2025-10-14 17:26:33,2025-10-16 09:58:57,Uber,-11.02,0.00,EUR,COMPLETED,505.63
+Card Payment,Current,2025-10-15 19:35:10,2025-10-16 10:10:07,Uber,-4.99,0.00,EUR,COMPLETED,500.64
+Transfer,Current,2025-10-17 17:26:16,2025-10-17 17:26:16,To Instant Access Savings,-0.44,0.00,EUR,COMPLETED,500.20
+Card Payment,Current,2025-10-17 17:26:16,2025-10-18 14:20:22,Claude.ai,-21.78,0.00,EUR,COMPLETED,478.42
+Transfer,Current,2025-10-20 15:28:24,2025-10-20 15:28:24,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,476.42
+Transfer,Current,2025-10-21 11:39:38,2025-10-21 11:39:39,Transfer to Revolut user,-200.00,0.00,EUR,COMPLETED,276.42
+Card Payment,Current,2025-10-20 15:28:24,2025-10-21 13:22:28,Canva,-27.00,0.00,EUR,COMPLETED,249.42
+Transfer,Current,2025-10-22 06:24:20,2025-10-22 06:24:20,To Instant Access Savings,-1.20,0.00,EUR,COMPLETED,248.22
+Card Payment,Current,2025-10-22 06:24:20,2025-10-22 14:17:09,BetterHelp,-35.40,0.00,EUR,COMPLETED,212.82
+Transfer,Current,2025-10-25 14:30:24,2025-10-25 14:30:24,To Instant Access Savings,-1.04,0.00,EUR,COMPLETED,211.78
+Transfer,Current,2025-10-26 07:06:40,2025-10-26 07:06:41,To Jamie Callum Nisbet,-20.00,0.00,EUR,COMPLETED,191.78
+Card Payment,Current,2025-10-25 14:30:24,2025-10-26 10:55:47,Kruidvat,-13.48,0.00,EUR,COMPLETED,178.30
+Transfer,Current,2025-10-27 00:22:52,2025-10-27 00:22:52,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,176.30
+Transfer,Current,2025-10-27 14:16:19,2025-10-27 14:16:19,Transfer from APOYAR LIMITED,3500.00,0.00,EUR,COMPLETED,3676.30
+Transfer,Current,2025-10-27 17:04:58,2025-10-27 17:04:58,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,3676.28
+Transfer,Current,2025-10-27 17:11:34,2025-10-27 17:11:34,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,3675.28
+Transfer,Current,2025-10-28 07:43:42,2025-10-28 07:43:43,To Jamie Callum Nisbet,-30.00,0.00,EUR,COMPLETED,3645.28
+Card Payment,Current,2025-10-27 17:11:34,2025-10-28 09:52:47,Ls Prego Nivelles,-3.50,0.00,EUR,COMPLETED,3641.78
+Card Payment,Current,2025-10-27 17:04:57,2025-10-28 10:17:08,Maniet Nivelles,-54.99,0.00,EUR,COMPLETED,3586.79
+Transfer,Current,2025-10-28 10:30:13,2025-10-28 10:30:14,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,3585.39
+Transfer,Current,2025-10-28 10:48:41,2025-10-28 10:48:41,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,3583.39
+Transfer,Current,2025-10-29 04:46:21,2025-10-29 04:46:22,To Instant Access Savings,-1.20,0.00,EUR,COMPLETED,3582.19
+Transfer,Current,2025-10-29 08:28:14,2025-10-29 08:28:14,Transfer to Revolut user,-500.00,0.00,EUR,COMPLETED,3082.19
+Card Payment,Current,2025-10-28 10:48:41,2025-10-29 10:08:28,Texaco,-3.00,0.00,EUR,COMPLETED,3079.19
+Card Payment,Current,2025-10-27 00:22:52,2025-10-29 10:37:42,WOO,-10.00,0.00,EUR,COMPLETED,3069.19
+Transfer,Current,2025-10-29 10:40:51,2025-10-29 10:40:51,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,3068.19
+Card Payment,Current,2025-10-29 04:46:21,2025-10-29 12:18:46,BetterHelp,-35.40,0.00,EUR,COMPLETED,3032.79
+Transfer,Current,2025-10-29 17:26:47,2025-10-29 17:26:47,Transfer to MARTA DO ROSARIO ANDRE,-278.85,0.00,EUR,COMPLETED,2753.94
+Card Payment,Current,2025-10-28 10:30:13,2025-10-30 11:32:21,Starbucks,-7.30,0.00,EUR,COMPLETED,2746.64
+Card Payment,Current,2025-10-29 10:40:51,2025-10-30 12:01:50,Bou Pat Watteau,-7.50,0.00,EUR,COMPLETED,2739.14
+Transfer,Current,2025-11-01 08:37:02,2025-11-01 08:37:02,To Instant Access Savings,-1000.00,0.00,EUR,COMPLETED,1739.14
+Transfer,Current,2025-11-01 11:34:44,2025-11-01 11:34:44,Transfer to Revolut user,-1000.00,0.00,EUR,COMPLETED,739.14
+Rev Payment,Current,2025-11-01 12:34:40,2025-11-01 12:34:46,SPIC AND SPAN. Home & *London,-40.80,0.00,EUR,COMPLETED,698.34
+Transfer,Current,2025-11-02 21:22:54,2025-11-02 21:22:54,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,696.34
+Card Payment,Current,2025-11-02 21:22:53,2025-11-03 11:40:09,Night and Day,-26.00,0.00,EUR,COMPLETED,670.34
+Transfer,Current,2025-11-03 12:50:36,2025-11-03 12:50:36,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,670.32
+Transfer,Current,2025-11-04 08:35:34,2025-11-04 08:35:35,To Jamie Callum Nisbet,-20.00,0.00,EUR,COMPLETED,650.32
+Card Payment,Current,2025-11-03 12:50:35,2025-11-04 09:20:07,Dropbox,-11.99,0.00,EUR,COMPLETED,638.33
+Transfer,Current,2025-11-04 13:57:13,2025-11-04 13:57:13,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,638.13
+Transfer,Current,2025-11-05 03:50:03,2025-11-05 03:50:03,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,636.13
+Transfer,Current,2025-11-05 07:31:53,2025-11-05 07:31:53,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,634.13
+Transfer,Current,2025-11-05 07:57:41,2025-11-05 07:57:41,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,633.93
+Transfer,Current,2025-11-05 10:05:31,2025-11-05 10:05:32,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,631.93
+Transfer,Current,2025-11-05 10:06:48,2025-11-05 10:06:49,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,631.73
+Card Payment,Current,2025-11-04 13:57:12,2025-11-05 10:59:53,Club,-99.90,0.00,EUR,COMPLETED,531.83
+Card Payment,Current,2025-11-05 03:50:03,2025-11-05 13:31:50,BetterHelp,-59.00,0.00,EUR,COMPLETED,472.83
+Transfer,Current,2025-11-05 17:48:59,2025-11-05 17:48:59,To Instant Access Savings,-1.84,0.00,EUR,COMPLETED,470.99
+Card Payment,Current,2025-11-05 07:57:40,2025-11-06 10:32:04,MaPharma,-43.90,0.00,EUR,COMPLETED,427.09
+Card Payment,Current,2025-11-05 10:05:31,2025-11-06 10:32:27,Burger King,-27.00,0.00,EUR,COMPLETED,400.09
+Card Payment,Current,2025-11-05 10:06:48,2025-11-06 10:32:27,Camden food co.,-8.90,0.00,EUR,COMPLETED,391.19
+Transfer,Current,2025-11-06 12:15:43,2025-11-06 12:15:44,Transfer to Revolut user,-250.00,0.00,EUR,COMPLETED,141.19
+Transfer,Current,2025-11-06 16:54:51,2025-11-06 16:54:52,Transfer to SOPHIE ANNE BERTRAND,-22.89,0.00,EUR,COMPLETED,118.30
+Transfer,Current,2025-11-06 17:16:43,2025-11-06 17:16:43,To Instant Access Savings,-0.76,0.00,EUR,COMPLETED,117.54
+Card Payment,Current,2025-11-06 17:16:43,2025-11-07 09:36:51,Talho Da Teresa,-35.62,0.00,EUR,COMPLETED,81.92
+Card Payment,Current,2025-11-05 17:48:59,2025-11-07 11:50:48,Uber Eats,-54.08,0.00,EUR,COMPLETED,27.84
+Card Payment,Current,2025-11-05 07:31:53,2025-11-07 11:51:18,Ryanair,-20.00,0.00,EUR,COMPLETED,7.84
+Transfer,Current,2025-11-10 11:59:33,2025-11-10 11:59:33,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,57.84
+Transfer,Current,2025-11-10 12:06:46,2025-11-10 12:06:46,To Instant Access Savings,-0.90,0.00,EUR,COMPLETED,56.94
+Transfer,Current,2025-11-10 20:19:42,2025-11-10 20:19:42,To Instant Access Savings,-0.38,0.00,EUR,COMPLETED,56.56
+Card Payment,Current,2025-11-10 12:06:45,2025-11-11 15:56:49,Vercel,-19.55,0.00,EUR,COMPLETED,37.01
+Transfer,Current,2025-11-11 23:32:22,2025-11-11 23:32:22,To Instant Access Savings,-0.48,0.00,EUR,COMPLETED,36.53
+Card Payment,Current,2025-11-10 20:19:42,2025-11-12 11:31:56,Pingo Doce,-12.81,0.00,EUR,COMPLETED,23.72
+Card Payment,Current,2025-11-11 23:32:22,2025-11-12 15:04:32,Vercel,-9.76,0.00,EUR,COMPLETED,13.96
+Transfer,Current,2025-11-12 21:38:55,2025-11-12 21:38:55,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,63.96
+Transfer,Current,2025-11-12 21:39:43,2025-11-12 21:39:43,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,62.56
+Card Payment,Current,2025-11-12 21:39:42,2025-11-13 14:55:35,BetterHelp,-41.30,0.00,EUR,COMPLETED,21.26
+Transfer,Current,2025-11-13 17:25:44,2025-11-13 17:25:44,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,71.26
+Transfer,Current,2025-11-13 17:39:06,2025-11-13 17:39:07,To Instant Access Savings,-1.02,0.00,EUR,COMPLETED,70.24
+Transfer,Current,2025-11-14 08:35:44,2025-11-14 08:35:44,To Instant Access Savings,-0.80,0.00,EUR,COMPLETED,69.44
+Transfer,Current,2025-11-14 17:38:18,2025-11-14 17:38:18,From Instant Access Savings,75.00,0.00,EUR,COMPLETED,144.44
+Transfer,Current,2025-11-14 17:44:45,2025-11-14 17:44:46,To Instant Access Savings,-1.92,0.00,EUR,COMPLETED,142.52
+Transfer,Current,2025-11-14 20:01:15,2025-11-14 20:01:15,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,192.52
+Transfer,Current,2025-11-14 20:01:23,2025-11-14 20:01:23,To Instant Access Savings,-1.00,0.00,EUR,COMPLETED,191.52
+Transfer,Current,2025-11-14 20:02:46,2025-11-14 20:02:46,Transfer from LOURENCO SAUD MONIZ BOTELHO,27.00,0.00,EUR,COMPLETED,218.52
+Card Payment,Current,2025-11-13 17:39:06,2025-11-15 10:25:29,Uber Eats,-39.49,0.00,EUR,COMPLETED,179.03
+Card Payment,Current,2025-11-14 17:44:45,2025-11-15 10:33:54,Lidl,-41.04,0.00,EUR,COMPLETED,137.99
+Card Payment,Current,2025-11-14 08:35:43,2025-11-15 10:58:12,Carlos Renan,-13.60,0.00,EUR,COMPLETED,124.39
+Card Payment,Current,2025-11-14 20:01:23,2025-11-15 11:48:37,Talay Thai House,-78.50,0.00,EUR,COMPLETED,45.89
+Transfer,Current,2025-11-15 11:50:54,2025-11-15 11:50:54,From Instant Access Savings,125.00,0.00,EUR,COMPLETED,170.89
+Transfer,Current,2025-11-15 11:50:54,2025-11-15 11:50:55,Transfer to Revolut user,-125.00,0.00,EUR,COMPLETED,45.89
+Transfer,Current,2025-11-15 15:55:00,2025-11-15 15:55:00,To Instant Access Savings,-1.70,0.00,EUR,COMPLETED,44.19
+Transfer,Current,2025-11-15 18:00:55,2025-11-15 18:00:56,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,144.19
+Transfer,Current,2025-11-15 18:00:56,2025-11-15 18:00:56,Transfer to Revolut user,-100.00,0.00,EUR,COMPLETED,44.19
+Transfer,Current,2025-11-15 18:35:10,2025-11-15 18:35:10,To Instant Access Savings,-0.02,0.00,EUR,COMPLETED,44.17
+Transfer,Current,2025-11-16 09:39:02,2025-11-16 09:39:02,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,94.17
+Transfer,Current,2025-11-16 09:39:02,2025-11-16 09:39:02,Transfer to Revolut user,-50.00,0.00,EUR,COMPLETED,44.17
+Card Payment,Current,2025-11-15 15:55:00,2025-11-16 09:57:27,Galp,-4.15,0.00,EUR,COMPLETED,40.02
+Card Payment,Current,2025-11-15 18:35:10,2025-11-16 10:31:03,Uber,-4.99,0.00,EUR,COMPLETED,35.03
+Transfer,Current,2025-11-16 16:38:14,2025-11-16 16:38:14,To Instant Access Savings,-0.60,0.00,EUR,COMPLETED,34.43
+Transfer,Current,2025-11-16 17:35:04,2025-11-16 17:35:04,From Instant Access Savings,75.00,0.00,EUR,COMPLETED,109.43
+Transfer,Current,2025-11-16 17:35:04,2025-11-16 17:35:05,Transfer to Revolut user,-75.00,0.00,EUR,COMPLETED,34.43
+Transfer,Current,2025-11-16 17:36:37,2025-11-16 17:36:37,From Instant Access Savings,75.00,0.00,EUR,COMPLETED,109.43
+Transfer,Current,2025-11-16 17:36:37,2025-11-16 17:36:37,Transfer to Revolut user,-75.00,0.00,EUR,COMPLETED,34.43
+Card Payment,Current,2025-11-16 16:38:13,2025-11-17 09:19:25,Balagan Food,-11.70,0.00,EUR,COMPLETED,22.73
+Transfer,Current,2025-11-17 16:25:58,2025-11-17 16:25:58,To Instant Access Savings,-0.44,0.00,EUR,COMPLETED,22.29
+Transfer,Current,2025-11-18 08:52:04,2025-11-18 08:52:04,From Instant Access Savings,130.00,0.00,EUR,COMPLETED,152.29
+Card Payment,Current,2025-11-17 16:25:57,2025-11-18 13:00:07,Claude.ai,-21.78,0.00,EUR,COMPLETED,130.51
+Transfer,Current,2025-11-19 08:14:10,2025-11-19 08:14:10,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,230.51
+Transfer,Current,2025-11-19 08:14:38,2025-11-19 08:14:38,Transfer to SOPHIE ANNE BERTRAND,-25.48,0.00,EUR,COMPLETED,205.03
+Transfer,Current,2025-11-19 08:19:02,2025-11-19 08:19:03,To Instant Access Savings,-0.80,0.00,EUR,COMPLETED,204.23
+Transfer,Current,2025-11-19 11:33:06,2025-11-19 11:33:06,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,204.03
+Card Payment,Current,2025-11-18 08:52:49,2025-11-19 12:12:17,Spicandspan.net,-129.30,0.00,EUR,COMPLETED,74.73
+Transfer,Current,2025-11-19 12:51:50,2025-11-19 12:51:50,To Instant Access Savings,-20.00,0.00,EUR,COMPLETED,54.73
+Transfer,Current,2025-11-19 12:52:26,2025-11-19 12:52:26,From Instant Access Savings,50.00,0.00,EUR,COMPLETED,104.73
+Transfer,Current,2025-11-19 12:52:36,2025-11-19 12:52:36,To Instant Access Savings,-0.78,0.00,EUR,COMPLETED,103.95
+Transfer,Current,2025-11-19 14:02:02,2025-11-19 14:02:03,To Instant Access Savings,-1.70,0.00,EUR,COMPLETED,102.25
+Card Payment,Current,2025-11-19 08:19:02,2025-11-20 08:37:21,Carlos Renan,-15.60,0.00,EUR,COMPLETED,86.65
+Transfer,Current,2025-11-20 09:21:37,2025-11-20 09:21:37,To Instant Access Savings,-1.72,0.00,EUR,COMPLETED,84.93
+Card Payment,Current,2025-11-19 11:33:06,2025-11-20 09:34:51,Repsol,-2.90,0.00,EUR,COMPLETED,82.03
+Card Payment,Current,2025-11-19 14:02:02,2025-11-20 09:34:51,Burger King,-8.15,0.00,EUR,COMPLETED,73.88
+Card Payment,Current,2025-11-19 12:52:36,2025-11-20 09:34:51,Lidl,-56.61,0.00,EUR,COMPLETED,17.27
+Transfer,Current,2025-11-20 17:08:44,2025-11-20 17:08:44,From Instant Access Savings,40.00,0.00,EUR,COMPLETED,57.27
+Transfer,Current,2025-11-20 18:24:52,2025-11-20 18:24:52,To Instant Access Savings,-0.08,0.00,EUR,COMPLETED,57.19
+Card Payment,Current,2025-11-20 09:21:36,2025-11-21 12:03:07,BP,-2.14,0.00,EUR,COMPLETED,55.05
+Transfer,Current,2025-11-21 13:08:16,2025-11-21 13:08:16,From Instant Access Savings,44.85,0.00,EUR,COMPLETED,99.90
+Transfer,Current,2025-11-21 14:16:12,2025-11-21 14:16:12,Transfer from APOYAR LIMITED,3500.00,0.00,EUR,COMPLETED,3599.90
+Transfer,Current,2025-11-21 14:31:18,2025-11-21 14:31:18,To Instant Access Savings,-3000.00,0.00,EUR,COMPLETED,599.90
+Transfer,Current,2025-11-21 15:09:31,2025-11-21 15:09:32,To Instant Access Savings,-1.34,0.00,EUR,COMPLETED,598.56
+Transfer,Current,2025-11-21 15:25:18,2025-11-21 15:25:19,To Instant Access Savings,-1.02,0.00,EUR,COMPLETED,597.54
+Transfer,Current,2025-11-21 16:00:19,2025-11-21 16:00:21,To Jamie Callum Nisbet,-40.00,0.00,EUR,COMPLETED,557.54
+Transfer,Current,2025-11-21 17:00:08,2025-11-21 17:00:09,Transfer to Revolut user,-200.00,0.00,EUR,COMPLETED,357.54
+Transfer,Current,2025-11-21 17:48:29,2025-11-21 17:48:29,To Instant Access Savings,-0.72,0.00,EUR,COMPLETED,356.82
+Transfer,Current,2025-11-21 17:48:45,2025-11-21 17:48:45,To Instant Access Savings,-1.54,0.00,EUR,COMPLETED,355.28
+Transfer,Current,2025-11-22 01:34:01,2025-11-22 01:34:01,To Instant Access Savings,-1.40,0.00,EUR,COMPLETED,353.88
+Card Payment,Current,2025-11-21 15:09:28,2025-11-22 09:00:14,Cortesiapelativa,-163.33,0.00,EUR,COMPLETED,190.55
+Transfer,Current,2025-11-22 09:21:22,2025-11-22 09:21:22,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,190.35
+Card Payment,Current,2025-11-21 15:25:18,2025-11-22 11:08:50,Sodimafra,-2.49,0.00,EUR,COMPLETED,187.86
+Card Payment,Current,2025-11-21 17:48:29,2025-11-22 11:08:53,Pingo Doce,-13.64,0.00,EUR,COMPLETED,174.22
+Card Payment,Current,2025-11-21 17:48:45,2025-11-22 11:08:53,Pingo Doce,-34.23,0.00,EUR,COMPLETED,139.99
+Card Payment,Current,2025-11-20 18:24:52,2025-11-22 11:32:31,Uber Eats,-39.96,0.00,EUR,COMPLETED,100.03
+Card Payment,Current,2025-11-22 01:34:01,2025-11-22 14:12:22,BetterHelp,-41.30,0.00,EUR,COMPLETED,58.73
+Transfer,Current,2025-11-22 14:36:58,2025-11-22 14:36:58,To Instant Access Savings,-0.20,0.00,EUR,COMPLETED,58.53
+Transfer,Current,2025-11-22 19:43:32,2025-11-22 19:43:33,Transfer from MARTA DO ROSARIO ANDRE,40.50,0.00,EUR,COMPLETED,99.03
+Transfer,Current,2025-11-23 09:56:17,2025-11-23 09:56:18,To Instant Access Savings,-2.00,0.00,EUR,COMPLETED,97.03
+Card Payment,Current,2025-11-22 09:21:22,2025-11-23 10:58:28,Padaria Artesanal,-16.90,0.00,EUR,COMPLETED,80.13
+Card Payment,Current,2025-11-22 14:36:58,2025-11-23 11:02:17,Burger King,-13.90,0.00,EUR,COMPLETED,66.23
+Transfer,Current,2025-11-23 12:57:43,2025-11-23 12:57:43,To Instant Access Savings,-0.12,0.00,EUR,COMPLETED,66.11
+Transfer,Current,2025-11-23 16:34:55,2025-11-23 16:34:55,From Instant Access Savings,500.00,0.00,EUR,COMPLETED,566.11
+Transfer,Current,2025-11-23 16:34:56,2025-11-23 16:34:56,Transfer to Revolut user,-500.00,0.00,EUR,COMPLETED,66.11
+Transfer,Current,2025-11-23 16:53:41,2025-11-23 16:53:41,From Instant Access Savings,100.00,0.00,EUR,COMPLETED,166.11
+Transfer,Current,2025-11-23 16:55:50,2025-11-23 16:55:51,To Instant Access Savings,-1.10,0.00,EUR,COMPLETED,165.01
+Card Payment,Current,2025-11-23 16:55:50,2025-11-24 10:22:44,Pingo Doce,-76.45,0.00,EUR,COMPLETED,88.56
+Deposit,Current,2025-11-24 10:35:51,2025-11-24 10:35:51,Payment from COLLABIMMO SRL,450.00,0.00,EUR,COMPLETED,538.56
+Card Payment,Current,2025-11-23 12:57:43,2025-11-24 11:59:29,Uber,-4.94,0.00,EUR,COMPLETED,533.62
+Transfer,Current,2025-11-24 12:31:37,2025-11-24 12:31:40,To Rogerio Duarte Portela,-42.80,0.00,EUR,COMPLETED,490.82
+Transfer,Current,2025-11-24 12:32:30,2025-11-24 12:32:33,To Rogerio Duarte Portela,-122.50,0.00,EUR,COMPLETED,368.32
+Transfer,Current,2025-11-24 12:33:21,2025-11-24 12:33:23,To Rogerio Duarte Portela,-67.08,0.00,EUR,COMPLETED,301.24
+Card Payment,Current,2025-11-23 09:56:17,2025-11-24 12:42:59,Canva,-27.00,0.00,EUR,COMPLETED,274.24
+Transfer,Current,2025-11-24 12:38:34,2025-11-24 13:10:24,To Comptable PUBLIC,-49.71,0.00,EUR,COMPLETED,224.53

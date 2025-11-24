@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["../../biome.json"],
+  "files": {
+    "includes": ["**/*", "!components/ui", "!lib/utils.ts", "!hooks/use-mobile.ts"]
+  }
+}
