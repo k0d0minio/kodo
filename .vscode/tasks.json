@@ -2,15 +2,17 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "🚀 Dev: Start Next.js Development Server",
-      "type": "npm",
-      "script": "dev",
-      "problemMatcher": [],
+      "label": "Dev: All Apps",
+      "detail": "Start all applications in development mode with hot reload",
+      "type": "shell",
+      "command": "pnpm dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
-        "focus": false,
-        "clear": true
+        "focus": false
       },
       "group": {
         "kind": "build",
@@ -21,15 +23,146 @@
       }
     },
     {
-      "label": "🏗️ Build: Production Build",
-      "type": "npm",
-      "script": "build",
-      "problemMatcher": ["$tsc"],
+      "label": "Dev: Platform",
+      "detail": "Start API and Platform applications in development mode",
+      "type": "shell",
+      "command": "pnpm platform:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
-        "focus": false,
-        "clear": true
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "runOptions": {
+        "runOn": "default"
+      }
+    },
+    {
+      "label": "Dev: Marketing",
+      "detail": "Start the marketing website in development mode",
+      "type": "shell",
+      "command": "pnpm marketing:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Dev: Docs",
+      "detail": "Start the documentation site in development mode",
+      "type": "shell",
+      "command": "pnpm docs:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Dev: Storybook",
+      "detail": "Start Storybook component library in development mode",
+      "type": "shell",
+      "command": "pnpm storybook:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Dev: Packages",
+      "detail": "Start UI and Services packages in development mode",
+      "type": "shell",
+      "command": "pnpm packages:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Dev: UI Package",
+      "detail": "Start the UI package in development mode",
+      "type": "shell",
+      "command": "pnpm ui:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Dev: Services Package",
+      "detail": "Start the Services package in development mode",
+      "type": "shell",
+      "command": "pnpm services:dev",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: All",
+      "detail": "Build all applications and packages for production",
+      "type": "shell",
+      "command": "pnpm build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
       },
       "group": {
         "kind": "build",
@@ -37,102 +170,212 @@
       }
     },
     {
-      "label": "▶️ Start: Production Server",
-      "type": "npm",
-      "script": "start",
+      "label": "Build: Platform",
+      "detail": "Build the Platform application for production",
+      "type": "shell",
+      "command": "pnpm platform:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: Marketing",
+      "detail": "Build the marketing website for production",
+      "type": "shell",
+      "command": "pnpm marketing:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: Docs",
+      "detail": "Build the documentation site for production",
+      "type": "shell",
+      "command": "pnpm docs:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: Storybook",
+      "detail": "Build Storybook component library for production",
+      "type": "shell",
+      "command": "pnpm storybook:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: Packages",
+      "detail": "Build UI and Services packages for production",
+      "type": "shell",
+      "command": "pnpm packages:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: UI Package",
+      "detail": "Build the UI package for production",
+      "type": "shell",
+      "command": "pnpm ui:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build: Services Package",
+      "detail": "Build the Services package for production",
+      "type": "shell",
+      "command": "pnpm services:build",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Tool: Webhook (ngrok)",
+      "detail": "Start ngrok tunnel for Platform webhooks on port 5000",
+      "type": "shell",
+      "command": "ngrok http --url=${NGROK_URL} 5000",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
-        "focus": false,
-        "clear": true
-      },
-      "group": "none"
+        "focus": false
+      }
     },
     {
-      "label": "🔍 Type Check: TypeScript Validation",
-      "type": "npm",
-      "script": "type-check",
-      "problemMatcher": ["$tsc"],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false,
-        "clear": true
-      },
-      "group": "test"
-    },
-    {
-      "label": "✅ Lint: Check Code Quality",
-      "type": "npm",
-      "script": "lint",
-      "problemMatcher": ["$eslint-stylish"],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false,
-        "clear": true
-      },
-      "group": "test"
-    },
-    {
-      "label": "🔧 Lint Fix: Auto-fix Linting Issues",
-      "type": "npm",
-      "script": "lint:fix",
-      "problemMatcher": ["$eslint-stylish"],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false,
-        "clear": true
-      },
-      "group": "test"
-    },
-    {
-      "label": "💅 Format: Format Code with Prettier",
-      "type": "npm",
-      "script": "format",
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false,
-        "clear": true
-      },
-      "group": "test"
-    },
-    {
-      "label": "🔄 Pre-Deploy: Full Check (Type + Lint + Build)",
-      "dependsOn": [
-        "🔍 Type Check: TypeScript Validation",
-        "✅ Lint: Check Code Quality",
-        "🏗️ Build: Production Build"
-      ],
-      "dependsOrder": "sequence",
+      "label": "Tool: Env Pull",
+      "detail": "Pull environment variables from remote configuration",
+      "type": "shell",
+      "command": "pnpm env:pull",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
-        "focus": true,
-        "clear": true
-      },
-      "group": "test"
+        "focus": false
+      }
     },
     {
-      "label": "🧹 Code Quality: Format + Lint Fix",
-      "dependsOn": [
-        "💅 Format: Format Code with Prettier",
-        "🔧 Lint Fix: Auto-fix Linting Issues"
+      "label": "Quality: Lint",
+      "detail": "Run ESLint to check code quality and find issues",
+      "type": "shell",
+      "command": "pnpm lint",
+      "problemMatcher": [
+        "$eslint-stylish"
       ],
-      "dependsOrder": "parallel",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Quality: Format",
+      "detail": "Format code using Prettier",
+      "type": "shell",
+      "command": "pnpm format",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "focus": false,
-        "clear": true
+        "focus": false
       },
-      "group": "test"
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Maintenance: Clean",
+      "detail": "Clean all build artifacts and temporary files",
+      "type": "shell",
+      "command": "pnpm clean",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      }
+    },
+    {
+      "label": "Maintenance: Install Dependencies",
+      "detail": "Install all project dependencies using pnpm",
+      "type": "shell",
+      "command": "pnpm install",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false
+      }
     }
   ]
 }
