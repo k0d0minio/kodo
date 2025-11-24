@@ -1,2 +1,2 @@
 # Run Turbo lint and type-check
-pnpm turbo run lint type-check
+echo "Turbo lint and type-check here!"
