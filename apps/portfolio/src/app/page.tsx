@@ -1,20 +1,20 @@
-import { Mailchimp } from "@/components";
-import { RotatingHeadline } from "@/components/RotatingHeadline";
-import { Projects } from "@/components/work/Projects";
-import { about, baseURL, home, person, routes } from "@/resources";
 import {
-  Avatar,
-  Badge,
-  Button,
-  Column,
   Heading,
-  Line,
-  Meta,
+  Text,
+  Button,
+  Avatar,
   RevealFx,
+  Column,
+  Badge,
   Row,
   Schema,
-  Text,
+  Meta,
+  Line,
 } from "@once-ui-system/core";
+import { home, about, person, baseURL, routes } from "@/resources";
+import { Mailchimp } from "@/components";
+import { Projects } from "@/components/work/Projects";
+import { RotatingHeadline } from "@/components/RotatingHeadline";
 
 export async function generateMetadata() {
   return Meta.generate({

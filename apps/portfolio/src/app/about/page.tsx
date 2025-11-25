@@ -1,6 +1,3 @@
-import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
-import { about, baseURL, person, social } from "@/resources";
 import {
   Avatar,
   Button,
@@ -9,12 +6,15 @@ import {
   Icon,
   IconButton,
   Media,
-  Meta,
-  Row,
-  Schema,
   Tag,
   Text,
+  Meta,
+  Schema,
+  Row,
 } from "@once-ui-system/core";
+import { baseURL, about, person, social } from "@/resources";
+import TableOfContents from "@/components/about/TableOfContents";
+import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
@@ -77,7 +77,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column" }} horizontal="center">
+      <Row fillWidth s={{ direction: "column"}} horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}

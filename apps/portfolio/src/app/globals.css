@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Scan the portfolio app's own source files */
+@source "../..";
+
+/* Scan the UI package's component source files */
+@source "../../../../packages/ui/src";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Import base CSS variables and theme from UI package source */
+/* Note: This imports the source file which includes variables and base styles */
+@import "../../../../packages/ui/src/globals.css";
+

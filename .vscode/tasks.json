@@ -23,10 +23,10 @@
       }
     },
     {
-      "label": "Dev: Platform",
-      "detail": "Start API and Platform applications in development mode",
+      "label": "Dev: Portfolio",
+      "detail": "Start Portfolio in development mode",
       "type": "shell",
-      "command": "pnpm platform:dev",
+      "command": "pnpm portfolio:dev",
       "problemMatcher": [
         "$tsc-watch"
       ],
@@ -44,10 +44,10 @@
       }
     },
     {
-      "label": "Dev: Marketing",
-      "detail": "Start the marketing website in development mode",
+      "label": "Dev: Finance",
+      "detail": "Start Finance in development mode",
       "type": "shell",
-      "command": "pnpm marketing:dev",
+      "command": "pnpm finance:dev",
       "problemMatcher": [
         "$tsc-watch"
       ],
@@ -59,60 +59,9 @@
       "group": {
         "kind": "build",
         "isDefault": false
-      }
-    },
-    {
-      "label": "Dev: Docs",
-      "detail": "Start the documentation site in development mode",
-      "type": "shell",
-      "command": "pnpm docs:dev",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated",
-        "focus": false
       },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Dev: Storybook",
-      "detail": "Start Storybook component library in development mode",
-      "type": "shell",
-      "command": "pnpm storybook:dev",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Dev: Packages",
-      "detail": "Start UI and Services packages in development mode",
-      "type": "shell",
-      "command": "pnpm packages:dev",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
+      "runOptions": {
+        "runOn": "default"
       }
     },
     {
@@ -152,88 +101,16 @@
       }
     },
     {
-      "label": "Build: All",
-      "detail": "Build all applications and packages for production",
+      "label": "Dev: Email Package",
+      "detail": "Start the Email package in development mode",
       "type": "shell",
-      "command": "pnpm build",
+      "command": "pnpm email:dev",
       "problemMatcher": [
-        "$tsc"
+        "$tsc-watch"
       ],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "Build: Platform",
-      "detail": "Build the Platform application for production",
-      "type": "shell",
-      "command": "pnpm platform:build",
-      "problemMatcher": [
-        "$tsc"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Build: Marketing",
-      "detail": "Build the marketing website for production",
-      "type": "shell",
-      "command": "pnpm marketing:build",
-      "problemMatcher": [
-        "$tsc"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Build: Docs",
-      "detail": "Build the documentation site for production",
-      "type": "shell",
-      "command": "pnpm docs:build",
-      "problemMatcher": [
-        "$tsc"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Build: Storybook",
-      "detail": "Build Storybook component library for production",
-      "type": "shell",
-      "command": "pnpm storybook:build",
-      "problemMatcher": [
-        "$tsc"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
+        "panel": "dedicated",
         "focus": false
       },
       "group": {
@@ -296,18 +173,6 @@
       }
     },
     {
-      "label": "Tool: Webhook (ngrok)",
-      "detail": "Start ngrok tunnel for Platform webhooks on port 5000",
-      "type": "shell",
-      "command": "ngrok http --url=${NGROK_URL} 5000",
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated",
-        "focus": false
-      }
-    },
-    {
       "label": "Tool: Env Pull",
       "detail": "Pull environment variables from remote configuration",
       "type": "shell",
@@ -317,40 +182,6 @@
         "reveal": "always",
         "panel": "dedicated",
         "focus": false
-      }
-    },
-    {
-      "label": "Quality: Lint",
-      "detail": "Run ESLint to check code quality and find issues",
-      "type": "shell",
-      "command": "pnpm lint",
-      "problemMatcher": [
-        "$eslint-stylish"
-      ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "test",
-        "isDefault": false
-      }
-    },
-    {
-      "label": "Quality: Format",
-      "detail": "Format code using Prettier",
-      "type": "shell",
-      "command": "pnpm format",
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "focus": false
-      },
-      "group": {
-        "kind": "test",
-        "isDefault": false
       }
     },
     {

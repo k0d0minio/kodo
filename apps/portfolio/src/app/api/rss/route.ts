@@ -1,5 +1,5 @@
-import { baseURL, person, work } from "@/resources";
 import { getPosts } from "@/utils/utils";
+import { baseURL, work, person } from "@/resources";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -36,7 +36,7 @@ export async function GET() {
       <guid>${baseURL}/work/${project.slug}</guid>
       <pubDate>${new Date(project.metadata.publishedAt).toUTCString()}</pubDate>
       <description><![CDATA[${project.metadata.summary}]]></description>
-      ${project.metadata.images?.[0] ? `<enclosure url="${baseURL}${project.metadata.images[0]}" type="image/jpeg" />` : ""}
+      ${project.metadata.images && project.metadata.images[0] ? `<enclosure url="${baseURL}${project.metadata.images[0]}" type="image/jpeg" />` : ""}
       ${project.metadata.tag ? `<category>${project.metadata.tag}</category>` : ""}
       <author>${person.email || "noreply@example.com"} (${person.name})</author>
     </item>`,

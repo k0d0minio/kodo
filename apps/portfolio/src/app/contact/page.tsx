@@ -1,6 +1,6 @@
+import { Flex, Meta, Schema } from "@once-ui-system/core";
 import ContactView from "@/components/contact/ContactView";
 import { baseURL, contact, person } from "@/resources";
-import { Flex, Meta, Schema } from "@once-ui-system/core";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -32,3 +32,4 @@ export default function Contact() {
     </Flex>
   );
 }
+

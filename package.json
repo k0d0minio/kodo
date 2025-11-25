@@ -25,6 +25,7 @@
     "ui:dev": "turbo run dev --filter=@kodo/ui",
     "services:build": "turbo run build --filter=@kodo/services",
     "services:dev": "turbo run dev --filter=@kodo/services",
+    "email:dev": "pnpm --filter @kodo/services email:dev",
     "packages:build": "turbo run build --filter=@kodo/ui --filter=@kodo/services --filter=@kodo/db",
     "packages:dev": "turbo run dev --filter=@kodo/ui --filter=@kodo/services --filter=@kodo/db",
     "prepare": "husky"
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "depcheck": "^1.4.7",
     "husky": "^9.1.7",
     "turbo": "^2.6.1",
     "typescript": "catalog:"

@@ -1,10 +1,10 @@
-import type { About, Contact, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Contact, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Jamie",
   lastName: "Nisbet",
-  name: "Jamie Nisbet",
+  name: `Jamie Nisbet`,
   role: "Full Stack Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "contact@jamienisbet.com",
@@ -45,12 +45,12 @@ const home: Home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: [
-    "Building AI-driven solutions that transform businesses",
-    "Full stack engineering with a focus on intelligent systems",
-    "Creating custom software solutions powered by AI",
-    "Transforming ideas into scalable, intelligent applications",
-    "Engineering solutions that leverage the power of AI",
-    "Building the future of software with AI at its core",
+    <>Building AI-driven solutions that transform businesses</>,
+    <>Full stack engineering with a focus on intelligent systems</>,
+    <>Creating custom software solutions powered by AI</>,
+    <>Transforming ideas into scalable, intelligent applications</>,
+    <>Engineering solutions that leverage the power of AI</>,
+    <>Building the future of software with AI at its core</>,
   ],
   featured: {
     display: true,
@@ -131,10 +131,14 @@ const about: About = {
         timeframe: "Recent",
         role: "Full Stack Software Engineer",
         achievements: [
-          "Developed and maintained full stack applications with a focus on AI-driven features and
-            intelligent system integration.",
-          "Built scalable solutions using modern technologies including React, Next.js, TypeScript,
-            and various AI/ML frameworks.",
+          <>
+            Developed and maintained full stack applications with a focus on AI-driven features and
+            intelligent system integration.
+          </>,
+          <>
+            Built scalable solutions using modern technologies including React, Next.js, TypeScript,
+            and various AI/ML frameworks.
+          </>,
         ],
         images: [],
       },
@@ -143,10 +147,14 @@ const about: About = {
         timeframe: "Previous",
         role: "Full Stack Software Engineer",
         achievements: [
-          "Contributed to the development of custom software solutions, working across the entire
-            technology stack from frontend to backend systems.",
-          "Collaborated with cross-functional teams to deliver high-quality applications that met
-            business requirements and technical standards.",
+          <>
+            Contributed to the development of custom software solutions, working across the entire
+            technology stack from frontend to backend systems.
+          </>,
+          <>
+            Collaborated with cross-functional teams to deliver high-quality applications that met
+            business requirements and technical standards.
+          </>,
         ],
         images: [],
       },
@@ -155,10 +163,14 @@ const about: About = {
         timeframe: "Ongoing",
         role: "Consultant & Freelance Developer",
         achievements: [
-          "Provided consulting services and custom software development for multiple clients across
-            various industries.",
-          "Managed projects from conception to deployment, ensuring timely delivery and high-quality
-            outcomes.",
+          <>
+            Provided consulting services and custom software development for multiple clients across
+            various industries.
+          </>,
+          <>
+            Managed projects from conception to deployment, ensuring timely delivery and high-quality
+            outcomes.
+          </>,
         ],
         images: [],
       },

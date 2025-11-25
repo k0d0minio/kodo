@@ -35,7 +35,6 @@
     "next": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
     "next": "^15.3.0",
     "tsup": "^8.0.0",
     "typescript": "catalog:"

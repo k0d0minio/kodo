@@ -1,57 +1,45 @@
-import type { IconType } from "react-icons";
+import { IconType } from "react-icons";
 
 import {
-  HiArrowRight,
-  HiArrowTopRightOnSquare,
   HiArrowUpRight,
-  HiCalendarDays,
+  HiOutlineLink,
+  HiArrowTopRightOnSquare,
   HiEnvelope,
-  HiOutlineDocument,
+  HiCalendarDays,
+  HiArrowRight,
   HiOutlineEye,
   HiOutlineEyeSlash,
+  HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
-  HiOutlineLink,
   HiOutlineRocketLaunch,
 } from "react-icons/hi2";
 
 import {
-  PiBookBookmarkDuotone,
-  PiGridFourDuotone,
   PiHouseDuotone,
-  PiImageDuotone,
   PiUserCircleDuotone,
+  PiGridFourDuotone,
+  PiBookBookmarkDuotone,
+  PiImageDuotone,
 } from "react-icons/pi";
 
 import {
-  SiDocker,
-  SiFigma,
-  SiGitlab,
   SiJavascript,
-  SiJenkins,
-  SiLinux,
-  SiMongodb,
   SiNextdotjs,
-  SiNodedotjs,
-  SiPhp,
-  SiPython,
-  SiReact,
+  SiFigma,
   SiSupabase,
+  SiReact,
   SiTypescript,
+  SiNodedotjs,
+  SiPython,
+  SiPhp,
+  SiDocker,
+  SiJenkins,
+  SiGitlab,
+  SiMongodb,
+  SiLinux,
 } from "react-icons/si";
 
-import {
-  FaDiscord,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaPinterest,
-  FaReddit,
-  FaTelegram,
-  FaThreads,
-  FaWhatsapp,
-  FaX,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,

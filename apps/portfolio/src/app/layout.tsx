@@ -1,20 +1,21 @@
 import "@once-ui-system/core/css/styles.css";
 import "@once-ui-system/core/css/tokens.css";
+import "./globals.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
 
-import { Footer, Header, Providers, RouteGuard } from "@/components";
-import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
 import {
   Background,
   Column,
   Flex,
   Meta,
+  opacity,
   RevealFx,
-  type SpacingToken,
-  type opacity,
+  SpacingToken,
 } from "@once-ui-system/core";
+import { Footer, Header, RouteGuard, Providers } from "@/components";
+import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({

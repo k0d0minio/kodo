@@ -1,5 +1,5 @@
+import { NextRequest, NextResponse } from "next/server";
 import * as cookie from "cookie";
-import { type NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
     );
 
     return response;
+  } else {
+    return NextResponse.json({ message: "Incorrect password" }, { status: 401 });
   }
-  return NextResponse.json({ message: "Incorrect password" }, { status: 401 });
 }

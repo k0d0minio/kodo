@@ -2,7 +2,7 @@
 
 import { Heading, Text } from "@once-ui-system/core";
 import { RevealFx } from "@once-ui-system/core";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 interface RotatingHeadlineProps {
   headlines: React.ReactNode[];
@@ -39,3 +39,4 @@ export function RotatingHeadline({ headlines, sublines }: RotatingHeadlineProps)
     </>
   );
 }
+
