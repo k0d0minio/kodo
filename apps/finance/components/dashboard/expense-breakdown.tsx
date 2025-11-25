@@ -49,7 +49,9 @@ export function ExpenseBreakdown() {
         .gte("date", startOfMonth)
         .lte("date", endOfMonth);
 
-      if (!expenses || expenses.length === 0) {
+      const typedExpenses = (expenses as Array<{ category: string | null; amount: number }> | null) ?? [];
+      
+      if (typedExpenses.length === 0) {
         setExpenseData([]);
         setTotalExpenses(0);
         return;
@@ -59,7 +61,7 @@ export function ExpenseBreakdown() {
       const categoryMap = new Map<string, number>();
       let total = 0;
 
-      for (const exp of expenses) {
+      for (const exp of typedExpenses) {
         const category = exp.category || "Uncategorized";
         const amount = exp.amount || 0;
         categoryMap.set(category, (categoryMap.get(category) || 0) + amount);

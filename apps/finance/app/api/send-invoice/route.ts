@@ -33,36 +33,48 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invoice not found" }, { status: 404 });
     }
 
-    if (!invoice.customers.email) {
+    const invoiceData = invoice as {
+      invoice_number: string;
+      total: number;
+      due_date: string;
+      status: string;
+      payment_link_token: string | null;
+      customers: {
+        name: string;
+        email: string;
+      };
+    };
+
+    if (!invoiceData.customers.email) {
       return NextResponse.json({ error: "Customer email not found" }, { status: 400 });
     }
 
     // Generate payment link if available
-    const paymentLink = invoice.payment_link_token
-      ? getPaymentLinkUrl(invoice.payment_link_token)
+    const paymentLink = invoiceData.payment_link_token
+      ? getPaymentLinkUrl(invoiceData.payment_link_token)
       : undefined;
 
     // Generate email template
     const emailHtml = generateInvoiceEmailTemplate({
-      invoiceNumber: invoice.invoice_number,
-      customerName: invoice.customers.name,
-      total: invoice.total,
-      dueDate: invoice.due_date,
+      invoiceNumber: invoiceData.invoice_number,
+      customerName: invoiceData.customers.name,
+      total: invoiceData.total,
+      dueDate: invoiceData.due_date,
       paymentLink,
     });
 
     // Send email
     const result = await sendEmail({
-      to: invoice.customers.email,
-      subject: `Invoice ${invoice.invoice_number} from Kodo Budget`,
+      to: invoiceData.customers.email,
+      subject: `Invoice ${invoiceData.invoice_number} from Kodo Budget`,
       html: emailHtml,
     });
 
     // Log email
     await logEmail(
       user.id,
-      invoice.customers.email,
-      `Invoice ${invoice.invoice_number} from Kodo Budget`,
+      invoiceData.customers.email,
+      `Invoice ${invoiceData.invoice_number} from Kodo Budget`,
       "invoice",
       result.success ? "sent" : "failed",
       result.error || null,
@@ -73,8 +85,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Update invoice status to "sent" if it's currently "draft"
-    if (invoice.status === "draft") {
-      await supabase.from("invoices").update({ status: "sent" }).eq("id", invoiceId);
+    if (invoiceData.status === "draft") {
+      await supabase.from("invoices").update({ status: "sent" } as never).eq("id", invoiceId);
     }
 
     return NextResponse.json({ success: true });

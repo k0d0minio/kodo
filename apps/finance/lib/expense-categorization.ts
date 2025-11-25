@@ -83,7 +83,7 @@ export async function autoCategorizeExpense(expense: ExpenseData): Promise<strin
   }
 
   // Find the first matching rule (highest priority)
-  for (const rule of rules) {
+  for (const rule of rules as ExpenseRule[]) {
     if (matchesRule(expense, rule)) {
       return rule.category;
     }
@@ -115,7 +115,7 @@ export async function testExpenseRules(
     return [];
   }
 
-  return rules.map((rule) => ({
+  return (rules as ExpenseRule[]).map((rule) => ({
     rule,
     matches: matchesRule(expense, rule),
   }));

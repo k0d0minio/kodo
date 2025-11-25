@@ -84,20 +84,22 @@ export function TimeTrackingSection() {
         .gte("date", startOfMonth.toISOString().split("T")[0])
         .eq("status", "completed");
 
-      const weeklyTotal = weeklyData?.reduce((sum, entry) => sum + (entry.hours || 0), 0) || 0;
-      const monthlyTotal = monthlyData?.reduce((sum, entry) => sum + (entry.hours || 0), 0) || 0;
+      const typedWeeklyData = (weeklyData as Array<{ hours: number | null; customers: { hourly_rate: number | null } | null }> | null) ?? [];
+      const typedMonthlyData = (monthlyData as Array<{ hours: number | null; customers: { hourly_rate: number | null } | null }> | null) ?? [];
+      const weeklyTotal = typedWeeklyData.reduce((sum, entry) => sum + (entry.hours || 0), 0);
+      const monthlyTotal = typedMonthlyData.reduce((sum, entry) => sum + (entry.hours || 0), 0);
 
       setWeeklyHours(Number(weeklyTotal.toFixed(2)));
       setMonthlyHours(Number(monthlyTotal.toFixed(2)));
 
       // Calculate estimated earnings (using average hourly rate or default)
       const allRates = [
-        ...(weeklyData?.map((e) => e.customers?.hourly_rate).filter(Boolean) || []),
-        ...(monthlyData?.map((e) => e.customers?.hourly_rate).filter(Boolean) || []),
+        ...typedWeeklyData.map((e) => e.customers?.hourly_rate).filter((rate): rate is number => typeof rate === 'number' && rate > 0),
+        ...typedMonthlyData.map((e) => e.customers?.hourly_rate).filter((rate): rate is number => typeof rate === 'number' && rate > 0),
       ];
       const avgRate =
         allRates.length > 0
-          ? allRates.reduce((sum, rate) => sum + (rate || 0), 0) / allRates.length
+          ? allRates.reduce((sum, rate) => sum + rate, 0) / allRates.length
           : 75; // Default rate
       setEstimatedEarnings(Number((monthlyTotal * avgRate).toFixed(2)));
     } catch (error) {
@@ -149,7 +151,7 @@ export function TimeTrackingSection() {
         .update({
           end_time: endTime,
           status: "completed",
-        })
+        } as never)
         .eq("id", currentSession.id);
 
       if (error) throw error;

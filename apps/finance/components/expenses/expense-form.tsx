@@ -147,12 +147,12 @@ export function ExpenseForm({ expense, onSuccess, onCancel }: ExpenseFormProps) 
 
       if (expense) {
         // Update existing expense
-        const { error } = await supabase.from("expenses").update(expenseData).eq("id", expense.id);
+        const { error } = await supabase.from("expenses").update(expenseData as never).eq("id", expense.id);
 
         if (error) throw error;
       } else {
         // Create new expense
-        const { error } = await supabase.from("expenses").insert(expenseData);
+        const { error } = await supabase.from("expenses").insert(expenseData as never);
 
         if (error) throw error;
       }

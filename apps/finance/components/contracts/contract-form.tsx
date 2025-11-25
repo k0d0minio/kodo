@@ -161,30 +161,30 @@ export function ContractForm({ contract, onSuccess, onCancel }: ContractFormProp
         // Update existing contract
         const { data: updatedContract, error } = await supabase
           .from("contracts")
-          .update(contractData)
+          .update(contractData as never)
           .eq("id", contract.id)
           .select()
           .single();
 
         if (error) throw error;
-        contractId = updatedContract.id;
+        contractId = (updatedContract as { id: string }).id;
       } else {
         // Create new contract
         const { data: newContract, error } = await supabase
           .from("contracts")
-          .insert(contractData)
+          .insert(contractData as never)
           .select()
           .single();
 
         if (error) throw error;
-        contractId = newContract.id;
+        contractId = (newContract as { id: string }).id;
 
         // Upload file if provided for new contract
         if (file) {
           contractUrl = await uploadContractFile(file, contractId);
           await supabase
             .from("contracts")
-            .update({ contract_url: contractUrl })
+            .update({ contract_url: contractUrl } as never)
             .eq("id", contractId);
         }
       }

@@ -25,7 +25,7 @@ async function autoCategorizeExpenseServer(
   }
 
   // Find the first matching rule (highest priority)
-  for (const rule of rules) {
+  for (const rule of rules as ExpenseRule[]) {
     if (matchesRule(expense, rule)) {
       return rule.category;
     }
@@ -155,12 +155,12 @@ export async function POST(request: NextRequest) {
 
     for (let i = 0; i < expensesToInsert.length; i += batchSize) {
       const batch = expensesToInsert.slice(i, i + batchSize);
-      const { error: insertError } = await supabase.from("expenses").insert(batch);
+      const { error: insertError } = await supabase.from("expenses").insert(batch as never);
 
       if (insertError) {
         // If batch insert fails, try individual inserts to identify problematic rows
         for (let j = 0; j < batch.length; j++) {
-          const { error: singleError } = await supabase.from("expenses").insert(batch[j]);
+          const { error: singleError } = await supabase.from("expenses").insert(batch[j] as never);
 
           if (singleError) {
             insertErrors.push({

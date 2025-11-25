@@ -169,13 +169,13 @@ export function RecurringInvoiceForm({
         // Update existing recurring invoice
         const { error } = await supabase
           .from("recurring_invoices")
-          .update(recurringInvoiceData)
+          .update(recurringInvoiceData as never)
           .eq("id", recurringInvoice.id);
 
         if (error) throw error;
       } else {
         // Create new recurring invoice
-        const { error } = await supabase.from("recurring_invoices").insert(recurringInvoiceData);
+        const { error } = await supabase.from("recurring_invoices").insert(recurringInvoiceData as never);
 
         if (error) throw error;
       }

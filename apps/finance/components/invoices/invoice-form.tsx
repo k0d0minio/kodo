@@ -202,9 +202,15 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
     if (error) {
       console.error("Error loading invoice items:", error);
     } else if (data) {
+      const typedData = data as Array<{
+        description: string;
+        quantity: number;
+        unit_price: number;
+        time_entry_id: string | null;
+      }>;
       form.setValue(
         "items",
-        data.map((item) => ({
+        typedData.map((item) => ({
           description: item.description,
           quantity: item.quantity,
           unit_price: item.unit_price,
@@ -253,13 +259,13 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
         // Update existing invoice
         const { data, error } = await supabase
           .from("invoices")
-          .update(invoiceData)
+          .update(invoiceData as never)
           .eq("id", invoice.id)
           .select()
           .single();
 
         if (error) throw error;
-        invoiceId = data.id;
+        invoiceId = (data as { id: string }).id;
 
         // Delete existing items
         await supabase.from("invoice_items").delete().eq("invoice_id", invoice.id);
@@ -267,12 +273,12 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
         // Create new invoice
         const { data, error } = await supabase
           .from("invoices")
-          .insert(invoiceData)
+          .insert(invoiceData as never)
           .select()
           .single();
 
         if (error) throw error;
-        invoiceId = data.id;
+        invoiceId = (data as { id: string }).id;
       }
 
       // Insert invoice items
@@ -285,7 +291,7 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
         time_entry_id: item.time_entry_id || null,
       }));
 
-      const { error: itemsError } = await supabase.from("invoice_items").insert(itemsToInsert);
+      const { error: itemsError } = await supabase.from("invoice_items").insert(itemsToInsert as never);
 
       if (itemsError) throw itemsError;
 

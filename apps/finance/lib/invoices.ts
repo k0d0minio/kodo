@@ -28,7 +28,8 @@ export async function generateInvoiceNumber(): Promise<string> {
   }
 
   // Extract the number part and increment
-  const lastNumber = invoices[0].invoice_number.replace(prefix, "");
+  const typedInvoices = invoices as Array<{ invoice_number: string }>;
+  const lastNumber = typedInvoices[0].invoice_number.replace(prefix, "");
   const nextNumber = Number.parseInt(lastNumber, 10) + 1;
   return `${prefix}${nextNumber.toString().padStart(4, "0")}`;
 }

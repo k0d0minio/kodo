@@ -65,8 +65,10 @@ export function MonthlyTrends() {
           .gte("date", startDate)
           .lte("date", endDate);
 
-        const income = invoices?.reduce((sum, inv) => sum + (inv.total || 0), 0) || 0;
-        const expensesTotal = expenses?.reduce((sum, exp) => sum + (exp.amount || 0), 0) || 0;
+        const typedInvoices = (invoices as Array<{ total: number }> | null) ?? [];
+        const typedExpenses = (expenses as Array<{ amount: number }> | null) ?? [];
+        const income = typedInvoices.reduce((sum, inv) => sum + (inv.total || 0), 0);
+        const expensesTotal = typedExpenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
 
         return { month, income, expenses: expensesTotal };
       });

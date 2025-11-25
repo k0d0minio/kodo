@@ -26,13 +26,10 @@ const customerSchema = z.object({
   business_address: z.string().optional(),
   phone_number: z.string().optional(),
   email: z.string().email("Please enter a valid email address").optional().or(z.literal("")),
-  hourly_rate: z
-    .string()
-    .optional()
-    .transform((val) => (val === "" ? null : val ? Number.parseFloat(val) : null)),
+  hourly_rate: z.string().optional(),
 });
 
-type CustomerFormValues = z.infer<typeof customerSchema>;
+type CustomerFormValues = z.input<typeof customerSchema>;
 
 interface CustomerFormProps {
   customer: Customer | null;
@@ -90,20 +87,20 @@ export function CustomerForm({ customer, onSuccess, onCancel }: CustomerFormProp
         tva_number: values.tva_number || null,
         business_address: values.business_address || null,
         phone_number: values.phone_number || null,
-        hourly_rate: values.hourly_rate || null,
+        hourly_rate: values.hourly_rate === "" ? null : values.hourly_rate ? Number.parseFloat(values.hourly_rate) : null,
       };
 
       if (customer) {
         // Update existing customer
         const { error } = await supabase
           .from("customers")
-          .update(customerData)
+          .update(customerData as never)
           .eq("id", customer.id);
 
         if (error) throw error;
       } else {
         // Create new customer
-        const { error } = await supabase.from("customers").insert([customerData]);
+        const { error } = await supabase.from("customers").insert([customerData] as never);
 
         if (error) throw error;
       }

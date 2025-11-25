@@ -109,7 +109,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         name: values.name,
         description: values.description || null,
         customer_id: values.customer_id,
-        budget: values.budget && values.budget !== "" ? values.budget : null,
+        budget: values.budget && typeof values.budget === 'number' ? values.budget : null,
         status: values.status,
         start_date: values.start_date,
         end_date: values.end_date && values.end_date !== "" ? values.end_date : null,
@@ -123,12 +123,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       let error;
       if (project) {
         // Update existing project
-        const result = await supabase.from("projects").update(projectData).eq("id", project.id);
+        const result = await supabase.from("projects").update(projectData as never).eq("id", project.id);
 
         error = result.error;
       } else {
         // Create new project
-        const result = await supabase.from("projects").insert(projectData);
+        const result = await supabase.from("projects").insert(projectData as never);
 
         error = result.error;
       }

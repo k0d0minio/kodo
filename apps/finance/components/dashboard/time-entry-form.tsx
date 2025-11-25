@@ -165,7 +165,7 @@ export function TimeEntryForm({
 
         const { error } = await supabase
           .from("time_entries")
-          .update(updateData)
+          .update(updateData as never)
           .eq("id", initialValues.id);
 
         if (error) throw error;
@@ -191,7 +191,7 @@ export function TimeEntryForm({
           status: mode === "start" ? ("in_progress" as const) : ("completed" as const),
         };
 
-        const { error } = await supabase.from("time_entries").insert([timeEntryData]);
+        const { error } = await supabase.from("time_entries").insert([timeEntryData] as never);
 
         if (error) throw error;
       }

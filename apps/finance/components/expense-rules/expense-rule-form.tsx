@@ -85,12 +85,12 @@ export function ExpenseRuleForm({ rule, onSuccess, onCancel }: ExpenseRuleFormPr
     try {
       if (rule) {
         // Update existing rule
-        const { error } = await supabase.from("expense_rules").update(values).eq("id", rule.id);
+        const { error } = await supabase.from("expense_rules").update(values as never).eq("id", rule.id);
 
         if (error) throw error;
       } else {
         // Create new rule
-        const { error } = await supabase.from("expense_rules").insert(values);
+        const { error } = await supabase.from("expense_rules").insert(values as never);
 
         if (error) throw error;
       }

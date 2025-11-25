@@ -16,6 +16,7 @@
     ".turbo",
     ".vercel",
     "out",
-    "*.tsbuildinfo"
+    "*.tsbuildinfo",
+    "scripts"
   ]
 }

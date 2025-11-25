@@ -64,5 +64,5 @@ export async function logEmail(
     template_type: templateType,
     status,
     error_message: errorMessage,
-  });
+  } as never);
 }

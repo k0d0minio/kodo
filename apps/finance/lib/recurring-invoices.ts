@@ -19,7 +19,19 @@ export async function generateInvoiceFromRecurring(recurringInvoiceId: string): 
     throw new Error("Recurring invoice not found");
   }
 
-  if (!recurringInvoice.active) {
+  const typedRecurringInvoice = recurringInvoice as {
+    id: string;
+    active: boolean;
+    customer_id: string;
+    project_id: string | null;
+    name: string;
+    frequency: string;
+    next_invoice_date: string;
+    amount: number;
+    description: string | null;
+  };
+
+  if (!typedRecurringInvoice.active) {
     throw new Error("Recurring invoice is not active");
   }
 
@@ -27,10 +39,10 @@ export async function generateInvoiceFromRecurring(recurringInvoiceId: string): 
   const invoiceNumber = await generateInvoiceNumber();
 
   // Calculate next invoice date
-  const currentDate = new Date(recurringInvoice.next_invoice_date);
+  const currentDate = new Date(typedRecurringInvoice.next_invoice_date);
   let nextDate: Date;
 
-  switch (recurringInvoice.frequency) {
+  switch (typedRecurringInvoice.frequency) {
     case "monthly":
       nextDate = addMonths(currentDate, 1);
       break;
@@ -51,19 +63,19 @@ export async function generateInvoiceFromRecurring(recurringInvoiceId: string): 
   const { data: invoice, error: invoiceError } = await supabase
     .from("invoices")
     .insert({
-      customer_id: recurringInvoice.customer_id,
-      project_id: recurringInvoice.project_id,
+      customer_id: typedRecurringInvoice.customer_id,
+      project_id: typedRecurringInvoice.project_id,
       invoice_number: invoiceNumber,
       issue_date: issueDate,
       due_date: dueDate,
-      subtotal: recurringInvoice.amount,
+      subtotal: typedRecurringInvoice.amount,
       tax_rate: 0,
       tax_amount: 0,
-      total: recurringInvoice.amount,
-      notes: recurringInvoice.description,
+      total: typedRecurringInvoice.amount,
+      notes: typedRecurringInvoice.description,
       payment_link_token: generatePaymentLinkToken(),
       status: "draft",
-    })
+    } as never)
     .select()
     .single();
 
@@ -71,14 +83,16 @@ export async function generateInvoiceFromRecurring(recurringInvoiceId: string): 
     throw invoiceError;
   }
 
+  const typedInvoice = invoice as { id: string };
+
   // Create invoice item
   const { error: itemError } = await supabase.from("invoice_items").insert({
-    invoice_id: invoice.id,
-    description: recurringInvoice.description || recurringInvoice.name,
+    invoice_id: typedInvoice.id,
+    description: typedRecurringInvoice.description || typedRecurringInvoice.name,
     quantity: 1,
-    unit_price: recurringInvoice.amount,
-    total: recurringInvoice.amount,
-  });
+    unit_price: typedRecurringInvoice.amount,
+    total: typedRecurringInvoice.amount,
+  } as never);
 
   if (itemError) {
     throw itemError;
@@ -90,14 +104,14 @@ export async function generateInvoiceFromRecurring(recurringInvoiceId: string): 
     .update({
       last_invoice_date: issueDate,
       next_invoice_date: nextDate.toISOString().split("T")[0],
-    })
+    } as never)
     .eq("id", recurringInvoiceId);
 
   if (updateError) {
     throw updateError;
   }
 
-  return invoice.id;
+  return typedInvoice.id;
 }
 
 /**
@@ -123,9 +137,10 @@ export async function generateDueRecurringInvoices(): Promise<number> {
     return 0;
   }
 
+  const typedDueRecurringInvoices = dueRecurringInvoices as Array<{ id: string }>;
   let generatedCount = 0;
 
-  for (const recurringInvoice of dueRecurringInvoices) {
+  for (const recurringInvoice of typedDueRecurringInvoices) {
     try {
       await generateInvoiceFromRecurring(recurringInvoice.id);
       generatedCount++;

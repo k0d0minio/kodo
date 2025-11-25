@@ -135,7 +135,7 @@ export function InvoiceDetail({ invoiceId }: InvoiceDetailProps) {
     try {
       const { error } = await supabase
         .from("invoices")
-        .update({ status: newStatus })
+        .update({ status: newStatus } as never)
         .eq("id", invoice.id);
 
       if (error) throw error;

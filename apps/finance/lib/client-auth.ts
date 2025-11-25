@@ -28,8 +28,18 @@ export async function validateClientToken(token: string): Promise<ClientSession 
     return null;
   }
 
+  const typedAccess = access as {
+    id: string;
+    customer_id: string;
+    email: string;
+    token_expires_at: string;
+    customers: {
+      name: string;
+    } | null;
+  };
+
   // Check if token is expired
-  const expiresAt = new Date(access.token_expires_at);
+  const expiresAt = new Date(typedAccess.token_expires_at);
   if (expiresAt < new Date()) {
     return null;
   }
@@ -37,13 +47,13 @@ export async function validateClientToken(token: string): Promise<ClientSession 
   // Update last login
   await supabase
     .from("client_portal_access")
-    .update({ last_login_at: new Date().toISOString() })
-    .eq("id", access.id);
+    .update({ last_login_at: new Date().toISOString() } as never)
+    .eq("id", typedAccess.id);
 
   return {
-    customerId: access.customer_id,
-    email: access.email,
-    customerName: access.customers?.name || "Customer",
+    customerId: typedAccess.customer_id,
+    email: typedAccess.email,
+    customerName: typedAccess.customers?.name || "Customer",
     expiresAt,
   };
 }

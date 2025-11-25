@@ -46,8 +46,10 @@ export function BudgetOverview() {
         .gte("date", startOfMonth)
         .lte("date", endOfMonth);
 
-      const totalIncome = invoices?.reduce((sum, inv) => sum + (inv.total || 0), 0) || 0;
-      const totalExpenses = expenses?.reduce((sum, exp) => sum + (exp.amount || 0), 0) || 0;
+      const typedInvoices = (invoices as Array<{ total: number }> | null) ?? [];
+      const typedExpenses = (expenses as Array<{ amount: number }> | null) ?? [];
+      const totalIncome = typedInvoices.reduce((sum, inv) => sum + (inv.total || 0), 0);
+      const totalExpenses = typedExpenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
       const remaining = totalIncome - totalExpenses;
 
       setData({

@@ -26,6 +26,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Customer not found" }, { status: 404 });
     }
 
+    const customerData = customer as { name: string; email: string };
+
     // Generate access token
     const accessToken = Array.from(crypto.getRandomValues(new Uint8Array(32)))
       .map((b) => b.toString(16).padStart(2, "0"))
@@ -41,7 +43,7 @@ export async function POST(request: NextRequest) {
         email,
         access_token: accessToken,
         token_expires_at: tokenExpiresAt.toISOString(),
-      },
+      } as never,
       {
         onConflict: "customer_id,email",
       },
@@ -57,7 +59,7 @@ export async function POST(request: NextRequest) {
 
     // Generate email template
     const emailHtml = generateClientPortalAccessEmailTemplate({
-      customerName: customer.name,
+      customerName: customerData.name,
       accessLink,
     });
 

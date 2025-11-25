@@ -93,29 +93,51 @@ export default function ClientInvoicesPage() {
         return;
       }
 
+      const typedInvoice = fullInvoice as {
+        invoice_number: string;
+        issue_date: string;
+        due_date: string;
+        customers: {
+          name: string;
+          email: string;
+          business_address: string | null;
+        };
+        invoice_items: Array<{
+          description: string;
+          quantity: number;
+          unit_price: number;
+          total: number;
+        }>;
+        subtotal: number;
+        tax_rate: number;
+        tax_amount: number;
+        total: number;
+        notes: string | null;
+      };
+
       const invoiceData = {
-        invoice_number: fullInvoice.invoice_number,
-        issue_date: fullInvoice.issue_date,
-        due_date: fullInvoice.due_date,
-        customer: fullInvoice.customers,
-        items: fullInvoice.invoice_items.map((item) => ({
+        invoice_number: typedInvoice.invoice_number,
+        issue_date: typedInvoice.issue_date,
+        due_date: typedInvoice.due_date,
+        customer: typedInvoice.customers,
+        items: typedInvoice.invoice_items.map((item) => ({
           description: item.description,
           quantity: item.quantity,
           unit_price: item.unit_price,
           total: item.total,
         })),
-        subtotal: fullInvoice.subtotal,
-        tax_rate: fullInvoice.tax_rate,
-        tax_amount: fullInvoice.tax_amount,
-        total: fullInvoice.total,
-        notes: fullInvoice.notes,
+        subtotal: typedInvoice.subtotal,
+        tax_rate: typedInvoice.tax_rate,
+        tax_amount: typedInvoice.tax_amount,
+        total: typedInvoice.total,
+        notes: typedInvoice.notes,
       };
 
       const blob = await generateInvoicePDF(invoiceData);
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `invoice-${fullInvoice.invoice_number}.pdf`;
+      a.download = `invoice-${invoice.invoice_number}.pdf`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
