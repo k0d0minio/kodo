@@ -12,7 +12,7 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint:check": "biome lint .",
-    "clean": "turbo run clean",
+    "clean": "turbo run clean && rm -rf node_modules .turbo",
     "ai:dev": "turbo run dev --filter=@kodo/ai",
     "ai:build": "turbo run build --filter=@kodo/ai",
     "support:dev": "turbo run dev --filter=@kodo/support",
