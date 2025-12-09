@@ -19,7 +19,7 @@
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
-    "next": "catalog:",
+    "next": "15.5.7",
     "next-mdx-remote": "^5.0.0",
     "prettier": "^3.0.0",
     "react": "catalog:",
