@@ -71,44 +71,38 @@ export function CustomerForm({ customer, onSuccess, onCancel }: CustomerFormProp
   async function onSubmit(values: CustomerFormValues) {
     setIsSubmitting(true);
     try {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const action = customer ? "update" : "create";
+      const response = await fetch("/api/stripe/customers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          action,
+          customerId: customer?.id,
+          name: values.name,
+          email: values.email || undefined,
+          phone_number: values.phone_number || undefined,
+          business_address: values.business_address || undefined,
+          tva_number: values.tva_number || undefined,
+          notes: values.notes || undefined,
+        }),
+      });
 
-      if (!user) {
-        throw new Error("User not authenticated");
-      }
+      const data = await response.json();
 
-      const customerData = {
-        ...values,
-        user_id: user.id,
-        email: values.email || null,
-        notes: values.notes || null,
-        tva_number: values.tva_number || null,
-        business_address: values.business_address || null,
-        phone_number: values.phone_number || null,
-        hourly_rate: values.hourly_rate === "" ? null : values.hourly_rate ? Number.parseFloat(values.hourly_rate) : null,
-      };
-
-      if (customer) {
-        // Update existing customer
-        const { error } = await supabase
-          .from("customers")
-          .update(customerData as never)
-          .eq("id", customer.id);
-
-        if (error) throw error;
-      } else {
-        // Create new customer
-        const { error } = await supabase.from("customers").insert([customerData] as never);
-
-        if (error) throw error;
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to save customer");
       }
 
       onSuccess();
     } catch (error) {
       console.error("Error saving customer:", error);
-      alert("Failed to save customer. Please try again.");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to save customer. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }

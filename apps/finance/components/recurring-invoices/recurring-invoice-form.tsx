@@ -41,6 +41,7 @@ type RecurringInvoiceFormValues = z.infer<typeof recurringInvoiceSchema>;
 interface Customer {
   id: string;
   name: string;
+  stripe_customer_id: string | null;
 }
 
 interface Project {
@@ -55,11 +56,12 @@ interface RecurringInvoiceFormProps {
     name: string;
     customer_id: string;
     project_id?: string | null;
-    frequency: "monthly" | "quarterly" | "yearly";
-    next_invoice_date: string;
-    amount: number;
+    frequency: "monthly" | "quarterly" | "yearly" | null;
+    next_invoice_date: string | null;
+    amount: number | null;
     description?: string | null;
     active: boolean;
+    stripe_subscription_id?: string | null;
   };
   onSuccess: () => void;
   onCancel: () => void;
@@ -82,7 +84,7 @@ export function RecurringInvoiceForm({
       name: recurringInvoice?.name || "",
       customer_id: recurringInvoice?.customer_id || "",
       project_id: recurringInvoice?.project_id || "__none__",
-      frequency: recurringInvoice?.frequency || "monthly",
+      frequency: (recurringInvoice?.frequency || "monthly") as "monthly" | "quarterly" | "yearly",
       next_invoice_date:
         recurringInvoice?.next_invoice_date || new Date().toISOString().split("T")[0],
       amount: recurringInvoice?.amount || 0,
@@ -106,7 +108,10 @@ export function RecurringInvoiceForm({
   }, [form.watch("customer_id")]);
 
   async function loadCustomers() {
-    const { data, error } = await supabase.from("customers").select("id, name").order("name");
+    const { data, error } = await supabase
+      .from("customers")
+      .select("id, name, stripe_customer_id")
+      .order("name");
 
     if (error) {
       console.error("Error loading customers:", error);
@@ -154,36 +159,39 @@ export function RecurringInvoiceForm({
   async function onSubmit(values: RecurringInvoiceFormValues) {
     setLoading(true);
     try {
-      const recurringInvoiceData = {
-        name: values.name,
-        customer_id: values.customer_id,
-        project_id: values.project_id === "__none__" ? null : values.project_id || null,
-        frequency: values.frequency,
-        next_invoice_date: values.next_invoice_date,
-        amount: values.amount,
-        description: values.description || null,
-        active: values.active,
-      };
+      const action = recurringInvoice ? "update" : "create";
+      const response = await fetch("/api/stripe/subscriptions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          action,
+          subscriptionId: recurringInvoice?.id,
+          customerId: values.customer_id,
+          name: values.name,
+          frequency: values.frequency,
+          amount: values.amount,
+          description: values.description || undefined,
+          projectId: values.project_id === "__none__" ? null : values.project_id || null,
+          active: values.active,
+        }),
+      });
 
-      if (recurringInvoice) {
-        // Update existing recurring invoice
-        const { error } = await supabase
-          .from("recurring_invoices")
-          .update(recurringInvoiceData as never)
-          .eq("id", recurringInvoice.id);
+      const data = await response.json();
 
-        if (error) throw error;
-      } else {
-        // Create new recurring invoice
-        const { error } = await supabase.from("recurring_invoices").insert(recurringInvoiceData as never);
-
-        if (error) throw error;
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to save recurring invoice");
       }
 
       onSuccess();
     } catch (error) {
       console.error("Error saving recurring invoice:", error);
-      alert("Failed to save recurring invoice. Please try again.");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to save recurring invoice. Please try again.",
+      );
     } finally {
       setLoading(false);
     }

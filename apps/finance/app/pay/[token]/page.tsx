@@ -20,14 +20,15 @@ interface InvoiceData {
   id: string;
   invoice_number: string;
   status: string;
-  issue_date: string;
-  due_date: string;
-  subtotal: number;
-  tax_rate: number;
-  tax_amount: number;
-  total: number;
+  issue_date: string | null;
+  due_date: string | null;
+  subtotal: number | null;
+  tax_rate: number | null;
+  tax_amount: number | null;
+  total: number | null;
   notes: string | null;
   payment_link_token: string | null;
+  stripe_invoice_id: string | null;
   customers: {
     name: string;
     email: string | null;
@@ -35,7 +36,20 @@ interface InvoiceData {
   };
   invoice_items: Array<{
     id: string;
-    description: string;
+    description: string | null;
+    quantity: number | null;
+    unit_price: number | null;
+    total: number | null;
+  }>;
+  // Stripe data
+  stripeHostedInvoiceUrl?: string | null;
+  stripeIssueDate?: string | null;
+  stripeDueDate?: string | null;
+  stripeSubtotal?: number | null;
+  stripeTaxAmount?: number | null;
+  stripeTotal?: number | null;
+  stripeLineItems?: Array<{
+    description: string | null;
     quantity: number;
     unit_price: number;
     total: number;
@@ -72,6 +86,22 @@ export default function PaymentPage({
           .single();
 
         if (error) throw error;
+
+        // If invoice has Stripe ID, fetch Stripe data via API
+        if (data.stripe_invoice_id) {
+          try {
+            const response = await fetch(`/api/stripe/invoices/${data.id}`);
+            if (response.ok) {
+              const invoiceData = await response.json();
+              setInvoice(invoiceData);
+              return;
+            }
+          } catch (stripeError) {
+            console.error("Error fetching Stripe invoice:", stripeError);
+          }
+        }
+
+        // Fall back to local data
         setInvoice(data);
       } catch (error) {
         console.error("Error loading invoice:", error);
@@ -94,21 +124,24 @@ export default function PaymentPage({
 
     setGeneratingPDF(true);
     try {
+      // Use Stripe data if available, otherwise fall back to local data
       const invoiceData = {
         invoice_number: invoice.invoice_number,
-        issue_date: invoice.issue_date,
-        due_date: invoice.due_date,
+        issue_date: invoice.stripeIssueDate || invoice.issue_date || new Date().toISOString().split("T")[0],
+        due_date: invoice.stripeDueDate || invoice.due_date || new Date().toISOString().split("T")[0],
         customer: invoice.customers,
-        items: invoice.invoice_items.map((item) => ({
-          description: item.description,
-          quantity: item.quantity,
-          unit_price: item.unit_price,
-          total: item.total,
-        })),
-        subtotal: invoice.subtotal,
-        tax_rate: invoice.tax_rate,
-        tax_amount: invoice.tax_amount,
-        total: invoice.total,
+        items: invoice.stripeLineItems || invoice.invoice_items
+          .filter((item) => item.description) // Only include items with descriptions
+          .map((item) => ({
+            description: item.description || "",
+            quantity: item.quantity || 1,
+            unit_price: item.unit_price || 0,
+            total: item.total || 0,
+          })),
+        subtotal: invoice.stripeSubtotal || invoice.subtotal || 0,
+        tax_rate: invoice.tax_rate || 0,
+        tax_amount: invoice.stripeTaxAmount || invoice.tax_amount || 0,
+        total: invoice.stripeTotal || invoice.total || 0,
         notes: invoice.notes,
       };
 
@@ -130,10 +163,14 @@ export default function PaymentPage({
   }
 
   function handlePay() {
-    // Placeholder for Stripe integration
-    alert(
-      "Payment integration coming soon! For now, please contact the invoice issuer to arrange payment.",
-    );
+    if (invoice?.stripeHostedInvoiceUrl) {
+      // Redirect to Stripe hosted invoice page
+      window.location.href = invoice.stripeHostedInvoiceUrl;
+    } else {
+      alert(
+        "Payment link not available. Please contact the invoice issuer to arrange payment.",
+      );
+    }
   }
 
   if (loading) {
@@ -208,12 +245,24 @@ export default function PaymentPage({
               <div>
                 <p className="text-sm text-muted-foreground">Issue Date</p>
                 <p className="font-medium">
-                  {format(new Date(invoice.issue_date), "MMM dd, yyyy")}
+                  {invoice.stripeIssueDate || invoice.issue_date
+                    ? format(
+                        new Date(invoice.stripeIssueDate || invoice.issue_date!),
+                        "MMM dd, yyyy",
+                      )
+                    : "-"}
                 </p>
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Due Date</p>
-                <p className="font-medium">{format(new Date(invoice.due_date), "MMM dd, yyyy")}</p>
+                <p className="font-medium">
+                  {invoice.stripeDueDate || invoice.due_date
+                    ? format(
+                        new Date(invoice.stripeDueDate || invoice.due_date!),
+                        "MMM dd, yyyy",
+                      )
+                    : "-"}
+                </p>
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Status</p>
@@ -223,7 +272,7 @@ export default function PaymentPage({
                 <p className="text-sm text-muted-foreground">Total</p>
                 <p className="font-medium text-lg">
                   €
-                  {invoice.total.toLocaleString("en-US", {
+                  {(invoice.stripeTotal || invoice.total || 0).toLocaleString("en-US", {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2,
                   })}
@@ -244,26 +293,28 @@ export default function PaymentPage({
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {invoice.invoice_items.map((item) => (
-                      <TableRow key={item.id}>
-                        <TableCell>{item.description}</TableCell>
-                        <TableCell className="text-right">{item.quantity}</TableCell>
-                        <TableCell className="text-right">
-                          €
-                          {item.unit_price.toLocaleString("en-US", {
-                            minimumFractionDigits: 2,
-                            maximumFractionDigits: 2,
-                          })}
-                        </TableCell>
-                        <TableCell className="text-right font-medium">
-                          €
-                          {item.total.toLocaleString("en-US", {
-                            minimumFractionDigits: 2,
-                            maximumFractionDigits: 2,
-                          })}
-                        </TableCell>
-                      </TableRow>
-                    ))}
+                    {(invoice.stripeLineItems || invoice.invoice_items.filter((item) => item.description)).map(
+                      (item, index) => (
+                        <TableRow key={item.id || index}>
+                          <TableCell>{item.description || "-"}</TableCell>
+                          <TableCell className="text-right">{item.quantity || 1}</TableCell>
+                          <TableCell className="text-right">
+                            €
+                            {(item.unit_price || 0).toLocaleString("en-US", {
+                              minimumFractionDigits: 2,
+                              maximumFractionDigits: 2,
+                            })}
+                          </TableCell>
+                          <TableCell className="text-right font-medium">
+                            €
+                            {(item.total || 0).toLocaleString("en-US", {
+                              minimumFractionDigits: 2,
+                              maximumFractionDigits: 2,
+                            })}
+                          </TableCell>
+                        </TableRow>
+                      ),
+                    )}
                   </TableBody>
                 </Table>
               </div>
@@ -275,18 +326,18 @@ export default function PaymentPage({
                   <span>Subtotal:</span>
                   <span>
                     €
-                    {invoice.subtotal.toLocaleString("en-US", {
+                    {(invoice.stripeSubtotal || invoice.subtotal || 0).toLocaleString("en-US", {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
                     })}
                   </span>
                 </div>
-                {invoice.tax_rate > 0 && (
+                {(invoice.stripeTaxAmount || invoice.tax_amount || 0) > 0 && (
                   <div className="flex justify-between">
-                    <span>Tax ({invoice.tax_rate}%):</span>
+                    <span>Tax ({invoice.tax_rate || 0}%):</span>
                     <span>
                       €
-                      {invoice.tax_amount.toLocaleString("en-US", {
+                      {(invoice.stripeTaxAmount || invoice.tax_amount || 0).toLocaleString("en-US", {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                       })}
@@ -297,7 +348,7 @@ export default function PaymentPage({
                   <span>Total:</span>
                   <span>
                     €
-                    {invoice.total.toLocaleString("en-US", {
+                    {(invoice.stripeTotal || invoice.total || 0).toLocaleString("en-US", {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
                     })}

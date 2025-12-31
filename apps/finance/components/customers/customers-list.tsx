@@ -31,8 +31,13 @@ export interface Customer {
   phone_number: string | null;
   email: string | null;
   hourly_rate: number | null;
+  stripe_customer_id: string | null;
   created_at: string;
   updated_at: string;
+  // Stripe data (fetched when available)
+  stripeEmail?: string | null;
+  stripePhone?: string | null;
+  stripeAddress?: string | null;
 }
 
 export function CustomersList() {
@@ -50,13 +55,37 @@ export function CustomersList() {
   async function loadCustomers() {
     try {
       setLoading(true);
-      const { data, error } = await supabase
+      // Load local customers
+      const { data: localCustomers, error } = await supabase
         .from("customers")
         .select("*")
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      setCustomers(data || []);
+
+      // Fetch Stripe data for customers with stripe_customer_id via API
+      const customersWithStripeData = await Promise.all(
+        (localCustomers || []).map(async (customer) => {
+          if (customer.stripe_customer_id) {
+            try {
+              const response = await fetch(`/api/stripe/customers/${customer.id}`);
+              if (response.ok) {
+                const data = await response.json();
+                return data;
+              }
+            } catch (error) {
+              console.error(
+                `Error fetching Stripe data for customer ${customer.id}:`,
+                error,
+              );
+            }
+          }
+          // Return customer with local data (for existing records without Stripe)
+          return customer;
+        }),
+      );
+
+      setCustomers(customersWithStripeData);
     } catch (error) {
       console.error("Error loading customers:", error);
     } finally {
@@ -70,14 +99,25 @@ export function CustomersList() {
     }
 
     try {
-      const { error } = await supabase.from("customers").delete().eq("id", customer.id);
+      const response = await fetch(`/api/stripe/customers?id=${customer.id}`, {
+        method: "DELETE",
+      });
 
-      if (error) throw error;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to delete customer");
+      }
+
       await loadCustomers();
       setDeletingCustomer(null);
     } catch (error) {
       console.error("Error deleting customer:", error);
-      alert("Failed to delete customer");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to delete customer",
+      );
     }
   }
 
@@ -148,11 +188,15 @@ export function CustomersList() {
                   {customers.map((customer) => (
                     <TableRow key={customer.id}>
                       <TableCell className="font-medium">{customer.name}</TableCell>
-                      <TableCell>{customer.email || "-"}</TableCell>
-                      <TableCell>{customer.phone_number || "-"}</TableCell>
+                      <TableCell>
+                        {customer.stripeEmail || customer.email || "-"}
+                      </TableCell>
+                      <TableCell>
+                        {customer.stripePhone || customer.phone_number || "-"}
+                      </TableCell>
                       <TableCell>{customer.tva_number || "-"}</TableCell>
                       <TableCell className="max-w-xs truncate">
-                        {customer.business_address || "-"}
+                        {customer.stripeAddress || customer.business_address || "-"}
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="flex justify-end gap-2">

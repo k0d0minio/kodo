@@ -28,9 +28,16 @@ export async function createClient(): Promise<SupabaseClient<Database>> {
       },
       setAll(cookiesToSet) {
         try {
-          for (const { name, value, options } of cookiesToSet) {
-            cookieStore.set(name, value, options);
-          }
+          cookiesToSet.forEach(({ name, value, options }) => {
+            cookieStore.set(name, value, {
+              ...options,
+              // Ensure these properties are explicitly set
+              httpOnly: options?.httpOnly ?? true,
+              secure: options?.secure ?? process.env.NODE_ENV === "production",
+              sameSite: options?.sameSite ?? "lax",
+              path: options?.path ?? "/",
+            });
+          });
         } catch {
           // The `setAll` method was called from a Server Component.
           // This can be ignored if you have middleware refreshing

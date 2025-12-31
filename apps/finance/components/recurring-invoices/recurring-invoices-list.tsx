@@ -17,8 +17,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { generateInvoiceFromRecurring } from "@/lib/recurring-invoices";
 import { createClient } from "@/lib/supabase/client";
+import { getStripeSubscription } from "@kodo/services/stripe";
 import { Edit, Play, Plus, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { RecurringInvoiceForm } from "./recurring-invoice-form";
@@ -28,17 +28,21 @@ export interface RecurringInvoice {
   name: string;
   customer_id: string;
   project_id: string | null;
-  frequency: "monthly" | "quarterly" | "yearly";
-  next_invoice_date: string;
+  frequency: "monthly" | "quarterly" | "yearly" | null;
+  next_invoice_date: string | null;
   last_invoice_date: string | null;
-  amount: number;
+  amount: number | null;
   description: string | null;
   active: boolean;
+  stripe_subscription_id: string | null;
   created_at: string;
   updated_at: string;
   customers: {
     name: string;
   };
+  // Stripe data (fetched when available)
+  stripeAmount?: number | null;
+  stripeNextInvoiceDate?: string | null;
 }
 
 export function RecurringInvoicesList() {
@@ -61,7 +65,8 @@ export function RecurringInvoicesList() {
   async function loadRecurringInvoices() {
     try {
       setLoading(true);
-      const { data, error } = await supabase
+      // Load local recurring invoices
+      const { data: localRecurringInvoices, error } = await supabase
         .from("recurring_invoices")
         .select(`
           *,
@@ -72,7 +77,44 @@ export function RecurringInvoicesList() {
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      setRecurringInvoices(data || []);
+
+      // Fetch Stripe data for subscriptions with stripe_subscription_id
+      const recurringInvoicesWithStripeData = await Promise.all(
+        (localRecurringInvoices || []).map(async (recurringInvoice) => {
+          if (recurringInvoice.stripe_subscription_id) {
+            try {
+              const stripeResult = await getStripeSubscription(
+                recurringInvoice.stripe_subscription_id,
+              );
+              if (stripeResult.success && stripeResult.subscription) {
+                const subscription = stripeResult.subscription;
+                const price = subscription.items.data[0]?.price;
+                return {
+                  ...recurringInvoice,
+                  active:
+                    subscription.status === "active" ||
+                    subscription.status === "trialing",
+                  stripeAmount: price ? price.unit_amount! / 100 : null, // Convert from cents
+                  stripeNextInvoiceDate: subscription.current_period_end
+                    ? new Date(
+                        subscription.current_period_end * 1000,
+                      ).toISOString().split("T")[0]
+                    : null,
+                };
+              }
+            } catch (error) {
+              console.error(
+                `Error fetching Stripe data for subscription ${recurringInvoice.id}:`,
+                error,
+              );
+            }
+          }
+          // Return recurring invoice with local data (for existing records without Stripe)
+          return recurringInvoice;
+        }),
+      );
+
+      setRecurringInvoices(recurringInvoicesWithStripeData);
     } catch (error) {
       console.error("Error loading recurring invoices:", error);
     } finally {
@@ -86,32 +128,40 @@ export function RecurringInvoicesList() {
     }
 
     try {
-      const { error } = await supabase
-        .from("recurring_invoices")
-        .delete()
-        .eq("id", recurringInvoice.id);
+      const response = await fetch(`/api/stripe/subscriptions?id=${recurringInvoice.id}`, {
+        method: "DELETE",
+      });
 
-      if (error) throw error;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to delete recurring invoice");
+      }
+
       await loadRecurringInvoices();
       setDeletingRecurringInvoice(null);
     } catch (error) {
       console.error("Error deleting recurring invoice:", error);
-      alert("Failed to delete recurring invoice");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to delete recurring invoice",
+      );
     }
   }
 
   async function handleGenerate(recurringInvoice: RecurringInvoice) {
-    setGenerating(recurringInvoice.id);
-    try {
-      await generateInvoiceFromRecurring(recurringInvoice.id);
-      await loadRecurringInvoices();
-      alert("Invoice generated successfully!");
-    } catch (error) {
-      console.error("Error generating invoice:", error);
-      alert("Failed to generate invoice");
-    } finally {
-      setGenerating(null);
+    // Stripe handles invoice generation automatically, so this is no longer needed
+    // But we can keep it for backward compatibility with old records
+    if (!recurringInvoice.stripe_subscription_id) {
+      alert(
+        "This recurring invoice is not linked to a Stripe subscription. Stripe subscriptions automatically generate invoices.",
+      );
+      return;
     }
+    alert(
+      "Stripe subscriptions automatically generate invoices. No manual generation needed.",
+    );
   }
 
   function handleEdit(recurringInvoice: RecurringInvoice) {
@@ -183,16 +233,26 @@ export function RecurringInvoicesList() {
                     <TableRow key={recurringInvoice.id}>
                       <TableCell className="font-medium">{recurringInvoice.name}</TableCell>
                       <TableCell>{recurringInvoice.customers.name}</TableCell>
-                      <TableCell className="capitalize">{recurringInvoice.frequency}</TableCell>
+                      <TableCell className="capitalize">
+                        {recurringInvoice.frequency || "N/A"}
+                      </TableCell>
                       <TableCell>
-                        {new Date(recurringInvoice.next_invoice_date).toLocaleDateString()}
+                        {recurringInvoice.stripeNextInvoiceDate || recurringInvoice.next_invoice_date
+                          ? new Date(
+                              recurringInvoice.stripeNextInvoiceDate ||
+                                recurringInvoice.next_invoice_date!,
+                            ).toLocaleDateString()
+                          : "-"}
                       </TableCell>
                       <TableCell>
                         €
-                        {recurringInvoice.amount.toLocaleString("en-US", {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
-                        })}
+                        {(recurringInvoice.stripeAmount || recurringInvoice.amount || 0).toLocaleString(
+                          "en-US",
+                          {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                          },
+                        )}
                       </TableCell>
                       <TableCell>
                         <span

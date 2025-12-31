@@ -13,6 +13,10 @@
     "./email": {
       "import": "./dist/email/index.js",
       "types": "./dist/email/index.d.ts"
+    },
+    "./stripe": {
+      "import": "./dist/stripe/index.js",
+      "types": "./dist/stripe/index.d.ts"
     }
   },
   "scripts": {
@@ -27,8 +31,11 @@
   "dependencies": {
     "@react-email/components": "^1.0.1",
     "@react-email/render": "^2.0.0",
+    "@stripe/react-stripe-js": "^5.4.1",
+    "@stripe/stripe-js": "^8.0.0",
     "react": "catalog:",
-    "resend": "^6.2.2"
+    "resend": "^6.2.2",
+    "stripe": "^17.3.1"
   },
   "devDependencies": {
     "@react-email/preview-server": "5.0.5",

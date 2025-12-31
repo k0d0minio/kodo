@@ -21,7 +21,6 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   calculateInvoiceTotals,
   generateInvoiceNumber,
-  generatePaymentLinkToken,
 } from "@/lib/invoices";
 import { createClient } from "@/lib/supabase/client";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -53,6 +52,7 @@ type InvoiceFormValues = z.infer<typeof invoiceSchema>;
 interface Customer {
   id: string;
   name: string;
+  stripe_customer_id: string | null;
 }
 
 interface Project {
@@ -137,7 +137,10 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
   }, [form.watch("customer_id")]);
 
   async function loadCustomers() {
-    const { data, error } = await supabase.from("customers").select("id, name").order("name");
+    const { data, error } = await supabase
+      .from("customers")
+      .select("id, name, stripe_customer_id")
+      .order("name");
 
     if (error) {
       console.error("Error loading customers:", error);
@@ -237,26 +240,33 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
   async function onSubmit(values: InvoiceFormValues) {
     setLoading(true);
     try {
-      const totals = calculateInvoiceTotals(values.items, values.tax_rate);
-
-      const invoiceData = {
-        customer_id: values.customer_id,
-        project_id: values.project_id === "__none__" ? null : values.project_id || null,
-        invoice_number: values.invoice_number,
-        issue_date: values.issue_date,
-        due_date: values.due_date,
-        subtotal: totals.subtotal,
-        tax_rate: values.tax_rate,
-        tax_amount: totals.taxAmount,
-        total: totals.total,
-        notes: values.notes || null,
-        payment_link_token: invoice ? undefined : generatePaymentLinkToken(),
-      };
-
-      let invoiceId: string;
-
       if (invoice) {
-        // Update existing invoice
+        // Update existing invoice - for now, we'll only update local data
+        // Stripe invoice updates would require more complex logic
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (!user) {
+          throw new Error("User not authenticated");
+        }
+
+        const invoiceData = {
+          user_id: user.id,
+          customer_id: values.customer_id,
+          project_id: values.project_id === "__none__" ? null : values.project_id || null,
+          invoice_number: values.invoice_number,
+          status: "draft",
+          // Minimal data - Stripe is source of truth
+          issue_date: null,
+          due_date: null,
+          subtotal: null,
+          tax_rate: null,
+          tax_amount: null,
+          total: null,
+          notes: null,
+        };
+
         const { data, error } = await supabase
           .from("invoices")
           .update(invoiceData as never)
@@ -265,40 +275,43 @@ export function InvoiceForm({ invoice, onSuccess, onCancel }: InvoiceFormProps) 
           .single();
 
         if (error) throw error;
-        invoiceId = (data as { id: string }).id;
 
-        // Delete existing items
+        // Delete existing items (minimal local storage)
         await supabase.from("invoice_items").delete().eq("invoice_id", invoice.id);
       } else {
-        // Create new invoice
-        const { data, error } = await supabase
-          .from("invoices")
-          .insert(invoiceData as never)
-          .select()
-          .single();
+        // Create new invoice via API route
+        const response = await fetch("/api/stripe/invoices", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            customerId: values.customer_id,
+            invoiceNumber: values.invoice_number,
+            issueDate: values.issue_date,
+            dueDate: values.due_date,
+            taxRate: values.tax_rate,
+            items: values.items,
+            notes: values.notes || undefined,
+            projectId: values.project_id === "__none__" ? null : values.project_id || null,
+          }),
+        });
 
-        if (error) throw error;
-        invoiceId = (data as { id: string }).id;
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Failed to create invoice");
+        }
       }
-
-      // Insert invoice items
-      const itemsToInsert = values.items.map((item) => ({
-        invoice_id: invoiceId,
-        description: item.description,
-        quantity: item.quantity,
-        unit_price: item.unit_price,
-        total: item.quantity * item.unit_price,
-        time_entry_id: item.time_entry_id || null,
-      }));
-
-      const { error: itemsError } = await supabase.from("invoice_items").insert(itemsToInsert as never);
-
-      if (itemsError) throw itemsError;
 
       onSuccess();
     } catch (error) {
       console.error("Error saving invoice:", error);
-      alert("Failed to save invoice. Please try again.");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to save invoice. Please try again.",
+      );
     } finally {
       setLoading(false);
     }

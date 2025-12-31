@@ -27,13 +27,18 @@ export interface Invoice {
   id: string;
   invoice_number: string;
   status: "draft" | "sent" | "paid" | "overdue" | "cancelled";
-  issue_date: string;
-  due_date: string;
-  total: number;
+  issue_date: string | null;
+  due_date: string | null;
+  total: number | null;
   customer_id: string;
+  stripe_invoice_id: string | null;
   customers: {
     name: string;
   };
+  // Stripe data (fetched when available)
+  stripeIssueDate?: string | null;
+  stripeDueDate?: string | null;
+  stripeTotal?: number | null;
 }
 
 export function InvoicesList() {
@@ -51,7 +56,8 @@ export function InvoicesList() {
   async function loadInvoices() {
     try {
       setLoading(true);
-      const { data, error } = await supabase
+      // Load local invoices
+      const { data: localInvoices, error } = await supabase
         .from("invoices")
         .select(`
           *,
@@ -62,7 +68,30 @@ export function InvoicesList() {
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      setInvoices(data || []);
+
+      // Fetch Stripe data for invoices with stripe_invoice_id via API
+      const invoicesWithStripeData = await Promise.all(
+        (localInvoices || []).map(async (invoice) => {
+          if (invoice.stripe_invoice_id) {
+            try {
+              const response = await fetch(`/api/stripe/invoices/${invoice.id}`);
+              if (response.ok) {
+                const data = await response.json();
+                return data;
+              }
+            } catch (error) {
+              console.error(
+                `Error fetching Stripe data for invoice ${invoice.id}:`,
+                error,
+              );
+            }
+          }
+          // Return invoice with local data (for existing records without Stripe)
+          return invoice;
+        }),
+      );
+
+      setInvoices(invoicesWithStripeData);
     } catch (error) {
       console.error("Error loading invoices:", error);
     } finally {
@@ -132,7 +161,7 @@ export function InvoicesList() {
 
   const totalPending = invoices
     .filter((inv) => inv.status === "sent" || inv.status === "overdue")
-    .reduce((sum, inv) => sum + inv.total, 0);
+    .reduce((sum, inv) => sum + (inv.stripeTotal || inv.total || 0), 0);
 
   return (
     <>
@@ -196,8 +225,20 @@ export function InvoicesList() {
                         </Link>
                       </TableCell>
                       <TableCell>{invoice.customers.name}</TableCell>
-                      <TableCell>{new Date(invoice.issue_date).toLocaleDateString()}</TableCell>
-                      <TableCell>{new Date(invoice.due_date).toLocaleDateString()}</TableCell>
+                      <TableCell>
+                        {invoice.stripeIssueDate || invoice.issue_date
+                          ? new Date(
+                              invoice.stripeIssueDate || invoice.issue_date!,
+                            ).toLocaleDateString()
+                          : "-"}
+                      </TableCell>
+                      <TableCell>
+                        {invoice.stripeDueDate || invoice.due_date
+                          ? new Date(
+                              invoice.stripeDueDate || invoice.due_date!,
+                            ).toLocaleDateString()
+                          : "-"}
+                      </TableCell>
                       <TableCell>
                         <span
                           className={`rounded-full px-2 py-0.5 text-xs ${getStatusColor(invoice.status)}`}
@@ -207,7 +248,7 @@ export function InvoicesList() {
                       </TableCell>
                       <TableCell className="text-right font-medium">
                         €
-                        {invoice.total.toLocaleString("en-US", {
+                        {(invoice.stripeTotal || invoice.total || 0).toLocaleString("en-US", {
                           minimumFractionDigits: 2,
                           maximumFractionDigits: 2,
                         })}

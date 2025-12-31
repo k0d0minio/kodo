@@ -1,2 +1,0 @@
-# Run Biome check and format on staged files
-echo "pnpm exec biome check --write --staged ."
